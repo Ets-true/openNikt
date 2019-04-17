@@ -25,6 +25,8 @@ from landing import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.home_view, name='home'),
+    url(r'^about/$', views.about_view, name='about'),
+    url(r'^contacts/$', views.contacts_view, name='contacts'),
 ]
 
 if settings.DEBUG:
