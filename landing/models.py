@@ -27,3 +27,13 @@ class Options(models.Model):
     def __unicode__(self):
         return u'%s' % self.header_text
 
+class Contact(models.Model):
+    header_text=models.CharField('заголовок', max_length=200)
+    text=models.TextField('текст', max_length=200)
+
+    class Meta:
+        verbose_name = u'Контакты'
+        verbose_name_plural = u'Контакты'
+
+    def __unicode__(self):
+        return u'%s' % self.header_text
