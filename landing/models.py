@@ -37,3 +37,11 @@ class Contact(models.Model):
 
     def __unicode__(self):
         return u'%s' % self.header_text
+
+class About(models.Model):
+    header_text=models.CharField('заголовок', max_length=200)
+    text=models.TextField('текст', max_length=200)
+    image=models.ImageField(verbose_name='фото', upload_to="images/about", blank=True)
+
+    def __unicode__(self):
+        return u'%s' % self.header_text
