@@ -7,6 +7,7 @@ from django.db import models
 class Slide(models.Model):
     header_text=models.CharField('заголовок', max_length=200)
     description=models.CharField('описание', max_length=200)
+    button_cpation=models.CharField('надпись на кнопке', max_length=200, blank=True)
     image=models.ImageField(verbose_name='фото', upload_to="images/slides")
 
     class Meta:
@@ -29,7 +30,8 @@ class Options(models.Model):
 
 class Contact(models.Model):
     header_text=models.CharField('заголовок', max_length=200)
-    text=models.TextField('текст', max_length=200)
+    text=models.TextField('текст', max_length=20000)
+    file=models.FileField('карточка контрагента', blank=True)
 
     class Meta:
         verbose_name = u'Контакты'
@@ -40,7 +42,7 @@ class Contact(models.Model):
 
 class About(models.Model):
     header_text=models.CharField('заголовок', max_length=200)
-    text=models.TextField('текст', max_length=200)
+    text=models.TextField('текст', max_length=20000)
     image=models.ImageField(verbose_name='фото', upload_to="images/about", blank=True)
 
     def __unicode__(self):

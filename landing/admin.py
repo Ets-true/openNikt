@@ -10,6 +10,6 @@ class OptionsModelAdmin(SummernoteModelAdmin):  # instead of ModelAdmin
     summernote_fields = '__all__'
 
 admin.site.register(Slide)
-admin.site.register(Contact)
+admin.site.register(Contact, OptionsModelAdmin)
 admin.site.register(About, OptionsModelAdmin)
 admin.site.register(Options, OptionsModelAdmin)

@@ -7,10 +7,11 @@
       <!-- Wrap the rest of the page in another container to center all the content. -->
       <div class="container marketing mt-5 p-5">
         <!-- START THE FEATURETTES -->
+      {% for about in about_text %}
         <div class="row featurette">
           <div class="col-md-7">
-            <h5>{{ about_text.header_text}}</h5>
-            <p>{{ about_text.text }}</p>
+            <h5>{{ about.header_text}}</h5>
+            <p>{% autoescape off%}{{ about.text }}</p>{% endautoescape %}
 {#            <p>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>#}
           </div>
           <div class="col-md-5">
@@ -18,6 +19,7 @@
           </div>
         </div>
         <hr class="featurette-divider">
+      {% endfor %}
         <!-- /END THE FEATURETTES -->
       </div><!-- /.container -->
     </main>
