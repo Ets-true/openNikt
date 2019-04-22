@@ -18,9 +18,6 @@
               <h5>{{ contact.header_text }}</h5>
               {% autoescape off %}{{ contact.text }}{% endautoescape %}
               <a href="{{ contact.file.url }}">Карточка контрагента</a>
-            <form>
-
-            </form>
           </div>
           <div class="col-md-5">
             <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0f6ee70ec3c370da5a46cdd3ec80927b6100384f9081f53d14c17a7b67a7ba06&amp;width=417.5&amp;height=417.5&amp;lang=ru_RU&amp;scroll=true"></script>              {# <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>#}
@@ -28,7 +25,49 @@
         </div>
 
         <hr class="featurette-divider">
+        <div class="row featurette">
+            <div class="col-md-7">
+                <form>
+            <h5>Напишите нам что-нибудь <i class="material-icons">tag_faces</i></h5>
+              <div class="form-group">
+                <label for="e_mail_input">Ваш e-mail</label>
+                <input type="email" class="form-control" id="e_mail_input" placeholder="name@example.com">
 
+              </div>
+              <div class="form-group">
+                <label for="name_input">Представьтесь, пожалуйста</label>
+                <input type="name" class="form-control" id="name_input" placeholder="Иван">
+              </div>
+{#              <div class="form-group">#}
+{#                <label for="exampleFormControlSelect1">Example select</label>#}
+{#                <select class="form-control" id="exampleFormControlSelect1">#}
+{#                  <option>1</option>#}
+{#                  <option>2</option>#}
+{#                  <option>3</option>#}
+{#                  <option>4</option>#}
+{#                  <option>5</option>#}
+{#                </select>#}
+{#              </div>#}
+{#              <div class="form-group">#}
+{#                <label for="exampleFormControlSelect2">Example multiple select</label>#}
+{#                <select multiple class="form-control" id="exampleFormControlSelect2">#}
+{#                  <option>1</option>#}
+{#                  <option>2</option>#}
+{#                  <option>3</option>#}
+{#                  <option>4</option>#}
+{#                  <option>5</option>#}
+{#                </select>#}
+{#              </div>#}
+              <div class="form-group">
+                <label for="exampleFormControlTextarea1">Текст сообщения</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+              </div>
+            <button type="submit" class="btn btn-primary mb-2">Отправить</button>
+            </form>
+            </div>
+        </div>
+
+            <hr class="featurette-divider">
         <!-- /END THE FEATURETTES -->
 
       </div><!-- /.container -->

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-
 from django.db import models
+from sorl.thumbnail import ImageField
 
 # Create your models here.
 class Slide(models.Model):
@@ -47,3 +47,7 @@ class About(models.Model):
 
     def __unicode__(self):
         return u'%s' % self.header_text
+
+class Logos(models.Model):
+    title=models.CharField('название', max_length=200)
+    image=ImageField(verbose_name='лого', upload_to="images/logos")
