@@ -104,14 +104,22 @@
 
 
         <div class="partners navbar-light bg-light navbar-expand-md d-md-flex">
-            <style>
-                .partners {
-                    height: 500px;
-                }
-            </style>
-            <div class="row">
-                <h2>Наши любимые клиенты и партнеры</h2>
-            </div>
+            <main class="container">
+                <div class="row featurette ml-auto">
+                    <h2 class="featurette-heading" style="margin-top: 10px;">Наши любимые клиенты и партнеры</h2>
+                    <div class="col-md-12">
+                        {% for logo in logos %}
+                            {% if logo.is_vendor %}
+                                {% load thumbnail %}
+                                    {% thumbnail logo.image "x50" crop="bottom" format="PNG" as im %}
+                                        <img class="img-thumbnail" src="{{ im.url }}" height="{{ im.height }}" width="{{ im.width }}">
+                                    {% empty %}
+                                {% endthumbnail %}
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </main>
         </div>
 
         <!-- START THE FEATURETTES -->

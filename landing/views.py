@@ -1,5 +1,5 @@
 from django.shortcuts import render, render_to_response, get_object_or_404
-from models import Slide, Contact, Options, About
+from models import Slide, Contact, Options, About, Logos
 # from django.template import RequestContext
 
 # Create your views here.
@@ -9,8 +9,9 @@ def send_mail(request):
 def home_view(request):
     slides_list=Slide.objects.all()
     options_list=Options.objects.all()
+    logos_list=Logos.objects.all()
     page_url = request.path
-    return render_to_response('home.html', {'slides': slides_list, 'options': options_list, 'page': page_url})
+    return render_to_response('home.html', {'slides': slides_list, 'options': options_list, 'page': page_url, "logos" :logos_list})
 
 def about_view(request):
     about=About.objects.all().order_by('id')

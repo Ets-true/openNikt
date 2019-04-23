@@ -50,4 +50,13 @@ class About(models.Model):
 
 class Logos(models.Model):
     title=models.CharField('название', max_length=200)
+    is_vendor=models.BooleanField(verbose_name='Вендор?')
     image=ImageField(verbose_name='лого', upload_to="images/logos")
+
+    class Meta:
+        verbose_name = u'Логотип'
+        verbose_name_plural = u'Логотипы'
+
+    def __unicode__(self):
+        return u'%s' % self.title
+

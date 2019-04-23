@@ -26,7 +26,7 @@ SECRET_KEY = '1y-th#rb_#@k#0qhtbzg!5(2g#ww^qm4_))&c$dp)!a4##5$mh'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["meyola.ru", "192.168.10.182"]
+ALLOWED_HOSTS = ["meyola.ru", "192.168.10.182", "web.backend"]
 
 
 # Application definition
