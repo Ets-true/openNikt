@@ -2,7 +2,7 @@ from django.contrib import admin
 from django_summernote.admin import SummernoteModelAdmin
 
 # Register your models here.
-from .models import Slide, Options, Contact, About, Logos
+from .models import Slide, Options, Contact, About, Logos,Phone
 
 
 # Apply summernote to all TextField in model.
@@ -14,3 +14,4 @@ admin.site.register(Contact, OptionsModelAdmin)
 admin.site.register(About, OptionsModelAdmin)
 admin.site.register(Options, OptionsModelAdmin)
 admin.site.register(Logos)
+admin.site.register(Phone)

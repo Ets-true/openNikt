@@ -1,4 +1,5 @@
 {% extends "__base.html" %}
+{% block title %}{{ title }}{% endblock %}
 {% block content %}
 {% load static %}
     <main role="main">
@@ -20,7 +21,7 @@
               <a href="{{ contact.file.url }}">Карточка контрагента</a>
           </div>
           <div class="col-md-5">
-            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0f6ee70ec3c370da5a46cdd3ec80927b6100384f9081f53d14c17a7b67a7ba06&amp;width=417.5&amp;height=417.5&amp;lang=ru_RU&amp;scroll=true"></script>              {# <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>#}
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0f6ee70ec3c370da5a46cdd3ec80927b6100384f9081f53d14c17a7b67a7ba06&amp;width=418&amp;height=418&amp;lang=ru_RU&amp;scroll=true"></script>
           </div>
         </div>
 
@@ -62,8 +63,13 @@
                 <label for="exampleFormControlTextarea1">Текст сообщения</label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
               </div>
-            <button type="submit" class="btn btn-primary mb-2">Отправить</button>
-            </form>
+                <button type="submit" class="btn btn-primary mb-2">Отправить</button>
+                </form>
+                </div>
+            <div class="col-md-5">
+                <figure>
+                     <img src="{% static 'images/hands_on_keyboard.jpg' %}">
+                </figure>
             </div>
         </div>
 

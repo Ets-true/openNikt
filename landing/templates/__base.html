@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
-    <title>Никтел - IT компания</title>
+    <title>Никтел - {% block title %}IT компания{% endblock %}</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/carousel/">
 
@@ -24,7 +24,7 @@
           .partners img {
               {#height: 50px;#}
               {#width: 100px;#}
-              margin: 0 5px 0 0;
+              margin: 5px 5px 0 0;
               /* filter: url(filters.svg#grayscale); Firefox 3.5+ */
               filter: gray; /* IE5+ */
               -webkit-filter: grayscale(1); /* Webkit Nightlies & Chrome Canary */
@@ -32,7 +32,7 @@
 
         }
 
-        img:hover {
+        .partners img:hover {
         filter: none;
           -webkit-filter: grayscale(0);
           -webkit-transform: scale(1.01);
@@ -92,6 +92,17 @@
           font-size: 3.5rem;
         }
       }
+
+    figure{
+       width:417.5px; /*container-width*/
+       height: 417.5px;
+       overflow:hidden; /*hide bounds of image */
+       margin:0;   /*reset margin of figure tag*/
+    }
+    figure img{
+       display:block; /*remove inline-block spaces*/
+       width:140%; /*make image streatch*/
+    }
     </style>
     <!-- Custom styles for this template -->
     <link href="{% static 'css/carousel.css'%}" rel="stylesheet">

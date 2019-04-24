@@ -5,10 +5,21 @@ from sorl.thumbnail import ImageField
 
 # Create your models here.
 class Slide(models.Model):
+    L = 'left'
+    C = 'center'
+    R = 'right'
+
+    POSITION_CHOICES = (
+        (L, 'Слева'),
+        (C, 'По центру'),
+        (R, 'Справа')
+    )
+
     header_text=models.CharField('заголовок', max_length=200)
     description=models.CharField('описание', max_length=200)
-    button_cpation=models.CharField('надпись на кнопке', max_length=200, blank=True)
+    button_caption=models.CharField('надпись на кнопке', max_length=200, blank=True)
     image=models.ImageField(verbose_name='фото', upload_to="images/slides")
+    text_position=models.CharField('позиция текста', max_length=1, choices=POSITION_CHOICES, default=L)
 
     class Meta:
         verbose_name = u'Слайд'
@@ -60,3 +71,9 @@ class Logos(models.Model):
     def __unicode__(self):
         return u'%s' % self.title
 
+class Phone(models.Model):
+    number=models.CharField('Номер телефона', max_length=20)
+
+    class Meta:
+        verbose_name = u'Номер телефона'
+        verbose_name_plural = u'Номера телефонов'
