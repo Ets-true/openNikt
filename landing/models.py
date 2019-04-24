@@ -66,14 +66,17 @@ class Partners(models.Model):
     link=models.CharField('Ссылка на сайт', max_length=200, blank=True)
 
     class Meta:
-        verbose_name = u'Логотип'
-        verbose_name_plural = u'Логотипы'
+        verbose_name = u'Партнер'
+        verbose_name_plural = u'Партнеры'
 
     def __unicode__(self):
         return u'%s' % self.title
 
 class Phone(models.Model):
     number=models.CharField('Номер телефона', max_length=20)
+
+    def __unicode__(self):
+        return u'%s' % self.number
 
     class Meta:
         verbose_name = u'Номер телефона'
