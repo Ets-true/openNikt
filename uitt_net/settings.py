@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_summernote',
     'sorl.thumbnail',
+    'requests',
     'landing',
 ]
 

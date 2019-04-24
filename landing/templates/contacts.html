@@ -28,16 +28,17 @@
         <hr class="featurette-divider">
         <div class="row featurette">
             <div class="col-md-7">
-                <form>
+                <form action="/send-message/" method="post">
+                    {% csrf_token %}
             <h5>Напишите нам что-нибудь <i class="material-icons">tag_faces</i></h5>
               <div class="form-group">
                 <label for="e_mail_input">Ваш e-mail</label>
-                <input type="email" class="form-control" id="e_mail_input" placeholder="name@example.com">
+                <input name="email" type="email" class="form-control" id="e_mail_input" placeholder="name@example.com">
 
               </div>
               <div class="form-group">
                 <label for="name_input">Представьтесь, пожалуйста</label>
-                <input type="name" class="form-control" id="name_input" placeholder="Иван">
+                <input name="name" type="text" class="form-control" id="name_input" placeholder="Иван">
               </div>
 {#              <div class="form-group">#}
 {#                <label for="exampleFormControlSelect1">Example select</label>#}
@@ -61,7 +62,7 @@
 {#              </div>#}
               <div class="form-group">
                 <label for="exampleFormControlTextarea1">Текст сообщения</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <textarea name="text" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
               </div>
                 <button type="submit" class="btn btn-primary mb-2">Отправить</button>
                 </form>

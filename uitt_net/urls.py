@@ -20,6 +20,7 @@ from django.conf.urls.static import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf import settings
 from landing import views
+from landing.views import send_message
 
 
 urlpatterns = [
@@ -27,6 +28,7 @@ urlpatterns = [
     url(r'^$', views.home_view, name='home'),
     url(r'^about/$', views.about_view, name='about'),
     url(r'^contacts/$', views.contacts_view, name='contacts'),
+    url(r'^send-message/$', send_message, name='message'),
     url(r'^summernote/', include('django_summernote.urls')),
 ]
 
