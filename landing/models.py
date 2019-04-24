@@ -59,10 +59,11 @@ class About(models.Model):
     def __unicode__(self):
         return u'%s' % self.header_text
 
-class Logos(models.Model):
+class Partners(models.Model):
     title=models.CharField('название', max_length=200)
     is_vendor=models.BooleanField(verbose_name='Вендор?')
     image=ImageField(verbose_name='лого', upload_to="images/logos")
+    link=models.CharField('Ссылка на сайт', max_length=200, blank=True)
 
     class Meta:
         verbose_name = u'Логотип'
