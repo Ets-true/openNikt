@@ -29,12 +29,25 @@ class Slide(models.Model):
         return u'%s' % self.header_text
 
 class Options(models.Model):
-    header_text=models.CharField('заголовок', max_length=200)
-    text=models.TextField('текст', max_length=200)
+    image=ImageField(verbose_name='изображение', upload_to="images/options")
+    header_text=models.CharField('заголовок', max_length=100)
+    text=models.TextField('текст', max_length=2000)
 
     class Meta:
         verbose_name = u'Вид деятельности'
         verbose_name_plural = u'Виды деятельности'
+
+    def __unicode__(self):
+        return u'%s' % self.header_text
+
+class Features(models.Model):
+    image=ImageField(verbose_name='изображение', upload_to="images/features")
+    header_text=models.CharField('заголовок', max_length=200)
+    subheader_text=models.CharField('подзаголовок', max_length=100, blank=True)
+
+    class Meta:
+        verbose_name=u'аргумент'
+        verbose_name_plural=u'аргументы'
 
     def __unicode__(self):
         return u'%s' % self.header_text

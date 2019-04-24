@@ -61,43 +61,23 @@
       <main class="container marketing">
 
         <!-- Three columns of text below the carousel -->
-        <div class="row">
-          <div class="col-lg-3">
-    {#        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>#}
-            <div class="center-cropped">
-                <img src="{% static 'images/gears.png'%}" width="140" height="140" class="rounded-circle border border-primary centered-and-cropped" >
-            </div>
-            <h5 class="logo-color">Системная интеграция</h5>
-            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-{#            <p><a class="btn btn-primary" href="#" role="button">Подробнее &raquo;</a></p>#}
-          </div><!-- /.col-lg-4 -->
-          <div class="col-lg-3">
-    {#        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>#}
-            <div class="center-cropped">
-                <img src="{% static 'images/infosec.png'%}" width="140" height="140" class="rounded-circle border border-primary centered-and-cropped" >
-            </div>
-            <h5 class="logo-color">Информационная безопасность</h5>
-            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-{#            <p><a class="btn btn-primary" href="#" role="button">Подробнее &raquo;</a></p>#}
-          </div><!-- /.col-lg-4 -->
-          <div class="col-lg-3">
-    {#        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>#}
-            <div class="center-cropped">
-                <img src="{% static 'images/web.png'%}" width="140" height="140" class="rounded-circle border border-primary centered-and-cropped" >
-            </div>
-            <h5 class="logo-color">Разработка ПО</h5>
-            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-{#            <p><a class="btn btn-primary" href="#" role="button">Подробнее &raquo;</a></p>#}
-          </div><!-- /.col-lg-4 -->
-          <div class="col-lg-3">
-    {#        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>#}
-            <div class="center-cropped">
-                <img src="{% static 'images/engeneering.png'%}" width="140" height="140" class="rounded-circle border border-primary centered-and-cropped" >
-            </div>
-            <h5 class="logo-color">Инженерные системы</h5>
-            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-{#            <p><a class="btn btn-primary" href="#" role="button">Подробнее &raquo;</a></p>#}
-          </div><!-- /.col-lg-4 -->
+          {% for option in options %}
+                {% if forloop.counter0 == 0 or forloop.counter0|divisibleby:4 %}
+                <div class="row">
+                {% endif %}
+                  <div class="col-lg-3">
+            {#        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>#}
+                    <div class="center-cropped">
+                        {% load thumbnail %}
+                        {% thumbnail option.image "x140" crop="center" format="PNG" as im %}
+                            <img src="{{ im.url }}" width="140" height="140" class="rounded-circle border border-primary centered-and-cropped" >
+                        {% endthumbnail %}
+                    </div>
+                    <h5 class="logo-color">{{ option.header_text }}</h5>
+                    {% autoescape off %}{{ option.text }}{% endautoescape %}
+            {#            <p><a class="btn btn-primary" href="#" role="button">Подробнее &raquo;</a></p>#}
+                  </div><!-- /.col-lg-4 -->
+            {% endfor %}
         </div><!-- /.row -->
           <hr class="featurette-divider">
       </main>
@@ -141,46 +121,54 @@
 
         <!-- START THE FEATURETTES -->
         <main class="container">
+            {% for feature in features %}
+            <hr class="featurette-divider">
+                <div class="row featurette">
+                  <div class="col-md-7 {% if forloop.counter|divisibleby:2 %}order-md-2{% endif %}">
+                    <h2 class="featurette-heading">{{ feature.header_text }} <span class="text-muted">{{ feature.subheader_text }}</span></h2>
+                    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                  </div>
+                  <div class="col-md-5 {% if forloop.counter|divisibleby:2 %}order-md-1{% endif %}">
+                      {% load thumbnail %}
+                        {% thumbnail feature.image "x500" crop="center" as im %}
+                        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="{{ im.url }}">
+                      {% empty %}
+                      {% endthumbnail %}
+        {#            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>#}
+                  </div>
+                </div>
+            {% endfor %}
+            <hr class="featurette-divider">
 
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-          </div>
-          <div class="col-md-5">
-            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-          </div>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7 order-md-2">
-            <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-          </div>
-          <div class="col-md-5 order-md-1">
-            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-          </div>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <div class="row featurette">
-          <div class="col-md-7">
-            <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-          </div>
-          <div class="col-md-5">
-            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-          </div>
-        </div>
-
-        <hr class="featurette-divider">
-
-        <!-- /END THE FEATURETTES -->
+{#        <hr class="featurette-divider">#}
+{##}
+{#        <div class="row featurette">#}
+{#          <div class="col-md-7 order-md-2">#}
+{#            <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>#}
+{#            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>#}
+{#          </div>#}
+{#          <div class="col-md-5 order-md-1">#}
+{#              <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="https://via.placeholder.com/500">#}
+{#            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>#}
+{#          </div>#}
+{#        </div>#}
+{##}
+{#        <hr class="featurette-divider">#}
+{##}
+{#        <div class="row featurette">#}
+{#          <div class="col-md-7">#}
+{#            <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>#}
+{#            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>#}
+{#          </div>#}
+{#          <div class="col-md-5">#}
+{#              <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="https://via.placeholder.com/500">#}
+{#            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>#}
+{#          </div>#}
+{#        </div>#}
+{##}
+{#        <hr class="featurette-divider">#}
+{##}
+{#        <!-- /END THE FEATURETTES -->#}
 
     </div><!-- /.container -->
     </main>
