@@ -86,7 +86,7 @@ class Partners(models.Model):
         return u'%s' % self.title
 
 class Phone(models.Model):
-    number=models.CharField('Номер телефона', max_length=20)
+    number=models.CharField('Номер телефона', max_length=15)
 
     def __unicode__(self):
         return u'%s' % self.number
