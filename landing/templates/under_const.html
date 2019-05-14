@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<style>
+#over {position:relative; text-align:center;
+   width:100%; height:100%; background: #FFF;}
+
+#over img{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}</style>
+
+{% load static %}
+<div id="over" style="position:absolute; width:97%; height:97%">
+<img src="{% static 'images/construction.png'%}" style="display: block; margin: auto auto; width: 500px;">
+</div>
+</body>
+</html>
+

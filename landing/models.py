@@ -2,6 +2,7 @@
 from __future__ import unicode_literals
 from django.db import models
 from sorl.thumbnail import ImageField
+from autoslug import AutoSlugField
 
 # Create your models here.
 class Slide(models.Model):
@@ -15,11 +16,11 @@ class Slide(models.Model):
         (R, 'Справа')
     )
 
-    header_text=models.CharField('заголовок', max_length=200)
-    description=models.CharField('описание', max_length=200)
-    button_caption=models.CharField('надпись на кнопке', max_length=200, blank=True)
-    image=models.ImageField(verbose_name='фото', upload_to="images/slides")
-    text_position=models.CharField('позиция текста', max_length=1, choices=POSITION_CHOICES, default=L)
+    header_text = models.CharField('заголовок', max_length=200)
+    description = models.CharField('описание', max_length=200)
+    button_caption = models.CharField('надпись на кнопке', max_length=200, blank=True)
+    image = models.ImageField(verbose_name='фото', upload_to="images/slides")
+    text_position = models.CharField('позиция текста', max_length=10, choices=POSITION_CHOICES, default=L)
 
     class Meta:
         verbose_name = u'Слайд'
@@ -29,9 +30,10 @@ class Slide(models.Model):
         return u'%s' % self.header_text
 
 class Options(models.Model):
-    image=ImageField(verbose_name='изображение', upload_to="images/options")
-    header_text=models.CharField('заголовок', max_length=100)
-    text=models.TextField('текст', max_length=2000)
+    image = ImageField(verbose_name='изображение', upload_to="images/options")
+    header_text = models.CharField('заголовок', max_length=100)
+    text = models.TextField('текст', max_length=2000)
+    slug = AutoSlugField(populate_from='header_text', allow_unicode=True, always_update=True)
 
     class Meta:
         verbose_name = u'Вид деятельности'
@@ -41,9 +43,10 @@ class Options(models.Model):
         return u'%s' % self.header_text
 
 class Features(models.Model):
-    image=ImageField(verbose_name='изображение', upload_to="images/features")
-    header_text=models.CharField('заголовок', max_length=200)
-    subheader_text=models.CharField('подзаголовок', max_length=100, blank=True)
+    image = ImageField(verbose_name='изображение', upload_to="images/features")
+    header_text = models.CharField('заголовок', max_length=200)
+    subheader_text = models.CharField('подзаголовок', max_length=100, blank=True)
+    slug = AutoSlugField(populate_from='subheader_text', allow_unicode=True, always_update=True)
 
     class Meta:
         verbose_name=u'аргумент'
@@ -53,9 +56,9 @@ class Features(models.Model):
         return u'%s' % self.header_text
 
 class Contact(models.Model):
-    header_text=models.CharField('заголовок', max_length=200)
-    text=models.TextField('текст', max_length=20000)
-    file=models.FileField('карточка контрагента', blank=True)
+    header_text = models.CharField('заголовок', max_length=200)
+    text = models.TextField('текст', max_length=20000)
+    file = models.FileField('карточка контрагента', blank=True)
 
     class Meta:
         verbose_name = u'Контакты'
@@ -65,18 +68,18 @@ class Contact(models.Model):
         return u'%s' % self.header_text
 
 class About(models.Model):
-    header_text=models.CharField('заголовок', max_length=200)
-    text=models.TextField('текст', max_length=20000)
-    image=models.ImageField(verbose_name='фото', upload_to="images/about", blank=True)
+    header_text = models.CharField('заголовок', max_length=200)
+    text = models.TextField('текст', max_length=20000)
+    image = models.ImageField(verbose_name='фото', upload_to="images/about", blank=True)
 
     def __unicode__(self):
         return u'%s' % self.header_text
 
 class Partners(models.Model):
-    title=models.CharField('название', max_length=200)
-    is_vendor=models.BooleanField(verbose_name='Вендор?')
-    image=ImageField(verbose_name='лого', upload_to="images/logos")
-    link=models.CharField('Ссылка на сайт', max_length=200, blank=True)
+    title= models.CharField('название', max_length=200)
+    is_vendor= models.BooleanField(verbose_name='Вендор?')
+    image = ImageField(verbose_name='лого', upload_to="images/logos")
+    link = models.CharField('Ссылка на сайт', max_length=200, blank=True)
 
     class Meta:
         verbose_name = u'Партнер'
@@ -86,7 +89,7 @@ class Partners(models.Model):
         return u'%s' % self.title
 
 class Phone(models.Model):
-    number=models.CharField('Номер телефона', max_length=15)
+    number = models.CharField('Номер телефона', max_length=100)
 
     def __unicode__(self):
         return u'%s' % self.number

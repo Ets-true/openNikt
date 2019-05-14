@@ -6,7 +6,7 @@
       <!-- Marketing messaging and featurettes
       ================================================== -->
       <!-- Wrap the rest of the page in another container to center all the content. -->
-      <div class="container marketing mt-5 p-5">
+      <div class="container mt-5">
         <!-- START THE FEATURETTES -->
       {% for about in abouts %}
         <div class="row featurette">
@@ -17,8 +17,8 @@
           </div>
           <div class="col-md-5">
                 {% load thumbnail %}
-                    {% thumbnail about.image "417x417" crop="center" as im %}
-                        <img class="" src="{{ im.url }}" height="{{ im.height }}" width="{{ im.width }}">
+                    {% thumbnail about.image "500x500" crop="center" as im %}
+                        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="{{ im.url }}" height="{{ im.height }}" width="{{ im.width }}">
                     {% empty %}
 
                 {% endthumbnail %}

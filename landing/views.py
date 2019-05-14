@@ -16,7 +16,8 @@ def send_message(request):
             bot_token = '768364819:AAHyomyBg_2vf7ll1de2FtNHSJrZdcuvL0E'
             bot_chatID = '1001403044490'
             send_text = 'https://api.telegram.org/bot' + bot_token + '/sendMessage?chat_id=-' + bot_chatID + \
-                        '&parse_mode=Markdown&text=' + u'Имя: ' + name + "\n" + u'Номер телефона: ' + phone + '\n' + 'e-mail: ' + e_mail + "\n" + u'Текст сообщения: ' + message
+                        '&parse_mode=Markdown&text=' + u'Имя: ' + name + "\n" + u'Номер телефона: ' + phone + '\n' + \
+                        'e-mail: ' + e_mail + "\n" + u'Текст сообщения: ' + message
             """https://api.telegram.org/bot768364819:AAHyomyBg_2vf7ll1de2FtNHSJrZdcuvL0E/sendMessage?chat_id=349390064&parse_mode=Markdown&text=TEST"""
 
             response = requests.get(send_text)
@@ -27,12 +28,11 @@ def send_message(request):
 
 
 phone_number=Phone.objects.last()
+options_list=Options.objects.all().order_by('id')
 
 def home_view(request):
     slides_list=Slide.objects.all()
-    options_list=Options.objects.all()
     partners_list=Partners.objects.all()
-
     features_list=Features.objects.all()
     page_url = request.path
     context = {'slides': slides_list, 'options': options_list, 'page': page_url, \
@@ -52,3 +52,14 @@ def contacts_view(request):
     token=get_token(request)
     context = {'token': token, 'contact': contact, 'page': page_url, "title": "Контакты", "phone": phone_number}
     return render(request, 'contacts.html', context)
+
+def options_view(request, option_slug):
+    option = get_object_or_404(Options, slug=option_slug)
+    return render(request, 'options.html', {'option': option, 'options': options_list, "phone": phone_number})
+
+def features_view(request, feature_slug):
+    feature = get_object_or_404(Features, slug=feature_slug)
+    return render(request, 'features.html', {'feature': feature, "phone": phone_number})
+
+def undr_const(request):
+    return render(request, 'under_const.html')

@@ -26,7 +26,9 @@ SECRET_KEY = '1y-th#rb_#@k#0qhtbzg!5(2g#ww^qm4_))&c$dp)!a4##5$mh'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["meyola.ru", "192.168.10.182", "web.backend"]
+UNDER_CONSTRUCTION = False
+
+ALLOWED_HOSTS = ["192.168.10.182", "web.devel"]
 
 
 # Application definition
@@ -41,6 +43,8 @@ INSTALLED_APPS = [
     'django_summernote',
     'sorl.thumbnail',
     'requests',
+    'unidecode',
+    'autoslug',
     'landing',
 ]
 
@@ -134,7 +138,7 @@ SUMMERNOTE_CONFIG = {
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static/"),
+    os.path.join(BASE_DIR, "/home/f145hka/.Projects/uitt.net/static/"),
 ]
 
 MEDIA_URL = '/media/'

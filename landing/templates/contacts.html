@@ -10,7 +10,7 @@
       ================================================== -->
       <!-- Wrap the rest of the page in another container to center all the content. -->
 
-      <div class="container marketing mt-5 p-5">
+      <div class="container marketing mt-5">
 
         <!-- START THE FEATURETTES -->
 
@@ -22,7 +22,7 @@
               {% autoescape off %}{{ contact.text }}{% endautoescape %}
               <a href="{{ contact.file.url }}">Карточка контрагента</a>
           </div>
-          <div class="col-md-5" style="height: 417.5px">
+          <div class="col-md-5">
             <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0f6ee70ec3c370da5a46cdd3ec80927b6100384f9081f53d14c17a7b67a7ba06&amp;width=418&amp;height=418&amp;lang=ru_RU&amp;scroll=true"></script>
           </div>
         </div>
@@ -78,7 +78,7 @@
                 </div>
             <div class="col-md-5">
                 <figure>
-                     <img src="{% static 'images/hands_on_keyboard.jpg' %}">
+                     <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="{% static 'images/hands_on_keyboard.jpg' %}">
                 </figure>
             </div>
         </div>
