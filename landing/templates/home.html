@@ -129,12 +129,12 @@
             <hr class="featurette-divider">
                 <div class="row featurette">
                   <div class="col-md-7 {% if forloop.counter|divisibleby:2 %}order-md-2{% endif %}">
-                      <h2 class="featurette-heading">{{ f.header_text }}<br><a href="/feature/{{ f.slug }}" class="text-muted">{{ f.subheader_text }}</a></h2>
-                    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                      <h2 class="featurette-heading">{{ f.header_text }}</h2><br><h4><a href="/feature/{{ f.slug }}" class="text-muted">{{ f.subheader_text }}</a></h4>
+{#                    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>#}
                   </div>
                   <a href="/feature/{{ f.slug }}" class="col-md-5 {% if forloop.counter|divisibleby:2 %}order-md-1{% endif %}">
                       {% load thumbnail %}
-                        {% thumbnail f.image "x500" crop="center" as im %}
+                        {% thumbnail f.image "500x500" crop="center" as im %}
                         <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="{{ im.url }}">
                       {% empty %}
                       {% endthumbnail %}
