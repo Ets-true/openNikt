@@ -36,6 +36,7 @@ else:
         url(r'^summernote/', include('django_summernote.urls')),
         url(r'^option/(?P<option_slug>[-\w]+)/$', views.options_view, name='options'),
         url(r'^feature/(?P<feature_slug>[-\w]+)/$', views.features_view, name='features'),
+        url(r'^slide/(?P<slide_slug>[-\w]+)/$', views.slides_view, name='slides'),
     ]
 
 if settings.DEBUG:

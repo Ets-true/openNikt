@@ -61,5 +61,9 @@ def features_view(request, feature_slug):
     feature = get_object_or_404(Features, slug=feature_slug)
     return render(request, 'features.html', {'feature': feature, "phone": phone_number})
 
+def slides_view(request, slide_slug):
+    slide = get_object_or_404(Slide, slug=slide_slug)
+    return render(request, 'slides.html', {'slide': slide, 'phone': phone_number})
+
 def undr_const(request):
     return render(request, 'under_const.html')

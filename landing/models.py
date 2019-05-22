@@ -21,6 +21,8 @@ class Slide(models.Model):
     button_caption = models.CharField('надпись на кнопке', max_length=200, blank=True)
     image = models.ImageField(verbose_name='фото', upload_to="images/slides")
     text_position = models.CharField('позиция текста', max_length=10, choices=POSITION_CHOICES, default=L)
+    slug = AutoSlugField(populate_from='header_text', allow_unicode=True, always_update=True)
+    material_text = models.TextField('текст страницы', max_length=20000, blank=True)
 
     class Meta:
         verbose_name = u'Слайд'
