@@ -39,9 +39,9 @@ if not DEBUG:
     X_FRAME_OPTIONS = 'DENY'
 
 
-UNDER_CONSTRUCTION = False
+UNDER_CONSTRUCTION = True
 
-ALLOWED_HOSTS = ["192.168.10.182", "web.devel", "web.backend"]
+ALLOWED_HOSTS = ["192.168.10.182", "web.devel", "web.deploy"]
 
 
 # Application definition
