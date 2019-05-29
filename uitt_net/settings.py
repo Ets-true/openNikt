@@ -39,7 +39,7 @@ if not DEBUG:
     X_FRAME_OPTIONS = 'DENY'
 
 
-UNDER_CONSTRUCTION = True
+UNDER_CONSTRUCTION = False
 
 ALLOWED_HOSTS = ["192.168.10.182", "web.devel", "web.deploy"]
 
