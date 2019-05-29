@@ -26,8 +26,8 @@ SECRET_KEY = '1y-th#rb_#@k#0qhtbzg!5(2g#ww^qm4_))&c$dp)!a4##5$mh'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-#SECURITY SETTINGS
-if DEBUG:
+if not DEBUG:
+    #SECURITY SETTINGS
     SECURE_HSTS_SECONDS = 3600
     SECURE_HSTS_INCLUDE_SUBDOMAINS = True
     SECURE_CONTENT_TYPE_NOSNIFF = True
@@ -38,9 +38,10 @@ if DEBUG:
     CSRF_COOKIE_SECURE = True
     X_FRAME_OPTIONS = 'DENY'
 
+
 UNDER_CONSTRUCTION = False
 
-ALLOWED_HOSTS = ["192.168.10.182", "web.devel"]
+ALLOWED_HOSTS = ["192.168.10.182", "web.devel", "web.backend"]
 
 
 # Application definition
@@ -103,6 +104,16 @@ DATABASES = {
     }
 }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'django_db',
+#         'USER' : 'django',
+#         'PASSWORD' : '%#1VjAHm7h',
+#         'HOST' : '127.0.0.1',
+#         'PORT' : '5432',
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
