@@ -25,8 +25,9 @@ SECRET_KEY = '1y-th#rb_#@k#0qhtbzg!5(2g#ww^qm4_))&c$dp)!a4##5$mh'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
+DEPLOY = True
 
-if not DEBUG:
+if DEPLOY:
     #SECURITY SETTINGS
     SECURE_HSTS_SECONDS = 3600
     SECURE_HSTS_INCLUDE_SUBDOMAINS = True
@@ -104,7 +105,7 @@ WSGI_APPLICATION = 'uitt_net.wsgi.application'
 #     }
 # }
 
-if DEBUG:
+if not DEPLOY:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.sqlite3',
