@@ -25,19 +25,19 @@ SECRET_KEY = '1y-th#rb_#@k#0qhtbzg!5(2g#ww^qm4_))&c$dp)!a4##5$mh'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
-DEPLOY = True
+DEPLOY = False
 
-# if DEPLOY:
-#     #SECURITY SETTINGS
-#     SECURE_HSTS_SECONDS = 3600
-#     SECURE_HSTS_INCLUDE_SUBDOMAINS = True
-#     SECURE_CONTENT_TYPE_NOSNIFF = True
-#     SECURE_BROWSER_XSS_FILTER = True
-#     #SECURE_SSL_REDIRECT = True
-#     SESSION_COOKIE_SECURE = True
-#     SECURE_HSTS_PRELOAD = True
-#     CSRF_COOKIE_SECURE = True
-#     X_FRAME_OPTIONS = 'DENY'
+if DEPLOY:
+    #SECURITY SETTINGS
+    SECURE_HSTS_SECONDS = 3600
+    SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+    SECURE_CONTENT_TYPE_NOSNIFF = True
+    SECURE_BROWSER_XSS_FILTER = True
+    #SECURE_SSL_REDIRECT = True
+    SESSION_COOKIE_SECURE = True
+    SECURE_HSTS_PRELOAD = True
+    CSRF_COOKIE_SECURE = True
+    X_FRAME_OPTIONS = 'DENY'
 
 
 UNDER_CONSTRUCTION = False
@@ -94,17 +94,7 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'uitt_net.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/1.9/ref/settings/#databases
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
-
+#Database
 if not DEPLOY:
     DATABASES = {
         'default': {

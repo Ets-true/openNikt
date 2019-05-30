@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import render, get_object_or_404, HttpResponse
-from models import Slide, Contact, Options, About, Partners, Phone, Features
+from models import Slide, Contact, Options, About, Partners, Features, Phone
 from django.middleware.csrf import get_token
 import requests
 
