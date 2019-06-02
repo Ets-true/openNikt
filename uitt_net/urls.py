@@ -21,6 +21,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.conf import settings
 from landing import views
 from landing.views import send_message
+from django.conf.urls.i18n import i18n_patterns
 
 if settings.UNDER_CONSTRUCTION:
     urlpatterns=[
@@ -37,6 +38,7 @@ else:
         url(r'^option/(?P<option_slug>[-\w]+)/$', views.options_view, name='options'),
         url(r'^feature/(?P<feature_slug>[-\w]+)/$', views.features_view, name='features'),
         url(r'^slide/(?P<slide_slug>[-\w]+)/$', views.slides_view, name='slides'),
+        url(r'^i18n/', include('django.conf.urls.i18n')),
     ]
 
 if settings.DEBUG:

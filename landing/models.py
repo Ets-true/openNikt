@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 from django.db import models
 from sorl.thumbnail import ImageField
 from autoslug import AutoSlugField
+from django.utils.translation import ugettext_lazy as _
 
 # Create your models here.
 class Slide(models.Model):

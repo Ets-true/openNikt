@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Django settings for uitt_net project.
 
@@ -24,7 +25,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '1y-th#rb_#@k#0qhtbzg!5(2g#ww^qm4_))&c$dp)!a4##5$mh'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 DEPLOY = False
 
 if DEPLOY:
@@ -60,11 +61,13 @@ INSTALLED_APPS = [
     'unidecode',
     'autoslug',
     'landing',
+    'modeltranslation',
 ]
 
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -136,7 +139,12 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
 
-LANGUAGE_CODE = 'ru-RU'
+LANGUAGE_CODE = 'ru'
+LANGUAGES = (
+    ('ru', 'Russian'),
+    ('en', 'English'),
+)
+MODELTRANSLATION_DEFAULT_LANGUAGE = 'ru'
 
 TIME_ZONE = 'Europe/Moscow'
 
@@ -158,7 +166,7 @@ SUMMERNOTE_CONFIG = {
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = 'static/'
+# STATIC_ROOT = 'static/'
 
 if DEBUG:
     STATICFILES_DIRS = [
@@ -167,3 +175,8 @@ if DEBUG:
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+LOCALE_PATHS = (
+    'locale',
+    # os.path.join(PROJECT_DIR, 'locale'),
+)

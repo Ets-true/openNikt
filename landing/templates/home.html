@@ -1,4 +1,5 @@
 {% extends "__base.html" %}
+{% load i18n %}
 {% block title %}{{ title }}{% endblock %}
 {% block content %}
     {% load static %}
@@ -89,7 +90,7 @@
         <div class="partners navbar-light bg-light navbar-expand-md d-md-flex">
             <main class="container">
                 <div class="row featurette ml-auto">
-                    <h2 class="featurette-heading" style="margin-top: 10px;">Наши клиенты и партнеры</h2>
+                    <h2 class="featurette-heading" style="margin-top: 10px; width: 100%;">{% trans 'Наши клиенты и партнеры' %}</h2>
                     <div class="col-md-6">
                         {% for partner in partners %}
                             {% if not partner.is_vendor %}

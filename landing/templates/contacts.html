@@ -1,4 +1,5 @@
 {% extends "__base.html" %}
+{% load i18n %}
 {% block head %}<meta name="csrf-token" content="{{ token }}">{% endblock %}
 {% block title %}{{ title }}{% endblock %}
 {% block content %}
@@ -20,7 +21,7 @@
 {#            <p>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>#}
               <h5>{{ contact.header_text }}</h5>
               {% autoescape off %}{{ contact.text }}{% endautoescape %}
-              <a href="{{ contact.file.url }}">Карточка контрагента</a>
+              <a href="{{ contact.file.url }}">{% trans 'Карточка контрагента'%}</a>
           </div>
           <div class="col-md-5">
             <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0f6ee70ec3c370da5a46cdd3ec80927b6100384f9081f53d14c17a7b67a7ba06&amp;width=418&amp;height=418&amp;lang=ru_RU&amp;scroll=true"></script>
@@ -32,18 +33,18 @@
             <div class="col-md-7">
                 <form action="" method="post">
                     {% csrf_token %}
-            <h5>Напишите нам что-нибудь <i class="material-icons">tag_faces</i></h5>
+            <h5>{% trans 'Напишите нам что-нибудь '%}<i class="material-icons">tag_faces</i></h5>
               <div class="form-group">
-                <label for="e_mail_input">Ваш e-mail</label>
+                <label for="e_mail_input">{% trans 'Ваш e-mail' %}</label>
                 <input name="email" type="email" class="form-control" id="e_mail_input" placeholder="name@example.com">
 
               </div>
               <div class="form-group">
-                <label for="name_input">Представьтесь, пожалуйста</label>
-                <input name="name" type="text" class="form-control" id="name_input" placeholder="Иван">
+                <label for="name_input">{% trans 'Представьтесь, пожалуйста' %}</label>
+                <input name="name" type="text" class="form-control" id="name_input" placeholder="{% trans 'Иван' %}">
               </div>
               <div class="form-group">
-                <label for="phone_input">Номер телефона <span class="text-muted">(необязательно)</span></label>
+                <label for="phone_input">{% trans 'Номер телефона ' %}<span class="text-muted">{% trans '(необязательно)' %}</span></label>
                 <input name="name" type="text" class="form-control" id="phone_input" placeholder="+74992815535">
               </div>
 {#              <div class="form-group">#}
@@ -67,12 +68,12 @@
 {#                </select>#}
 {#              </div>#}
               <div class="form-group">
-                <label for="text">Текст сообщения</label>
+                <label for="text">{% trans 'Текст сообщения' %}</label>
                 <textarea name="text" class="form-control" id="text" rows="3"></textarea>
               </div>
               <div class="form-group">
 {#                  <div class="g-recaptcha" data-sitekey="6LeLPqAUAAAAACA1yUnkWfmIQaNHlu6kPINcYk2l"></div>#}
-                  <button type="button" class="snd-btn btn btn-primary mb-2">Отправить</button>
+                  <button type="button" class="snd-btn btn btn-primary mb-2">{% trans 'Отправить' %}</button>
               </div>
                 </form>
                 </div>
