@@ -5,32 +5,8 @@ from sorl.thumbnail import ImageField
 from autoslug import AutoSlugField
 from django.utils.translation import ugettext_lazy as _
 
-# Create your models here.
-class Slide(models.Model):
-    L = 'left'
-    C = 'center'
-    R = 'right'
 
-    POSITION_CHOICES = (
-        (L, 'Слева'),
-        (C, 'По центру'),
-        (R, 'Справа')
-    )
 
-    header_text = models.CharField('заголовок', max_length=200)
-    description = models.CharField('описание', max_length=200)
-    button_caption = models.CharField('надпись на кнопке', max_length=200, blank=True)
-    image = models.ImageField(verbose_name='фото', upload_to="images/slides")
-    text_position = models.CharField('позиция текста', max_length=10, choices=POSITION_CHOICES, default=L)
-    slug = AutoSlugField(populate_from='header_text', allow_unicode=True, always_update=True)
-    material_text = models.TextField('текст страницы', max_length=20000, blank=True)
-
-    class Meta:
-        verbose_name = u'Слайд'
-        verbose_name_plural = u'Слайды'
-
-    def __unicode__(self):
-        return u'%s' % self.header_text
 
 class Options(models.Model):
     image = ImageField(verbose_name='изображение', upload_to="images/options")

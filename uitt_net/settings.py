@@ -43,7 +43,7 @@ if DEPLOY:
 
 UNDER_CONSTRUCTION = False
 
-ALLOWED_HOSTS = ["192.168.10.182", "web.devel", "web.deploy"]
+ALLOWED_HOSTS = ["192.168.10.182", "web.devel", "web.deploy", "127.0.0.1"]
 
 
 # Application definition
@@ -170,7 +170,7 @@ STATIC_URL = '/static/'
 
 if DEBUG:
     STATICFILES_DIRS = [
-        os.path.join(BASE_DIR, "/home/f145hka/.Projects/uitt.net/static/"),
+        os.path.join(BASE_DIR, "/home/kirill/Niktel_landing/uitt.net/static/"),
     ]
 
 MEDIA_URL = '/media/'

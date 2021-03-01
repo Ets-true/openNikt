@@ -1,94 +1,98 @@
 {% extends "__base.html" %}
 {% load i18n %}
-{% block head %}<meta name="csrf-token" content="{{ token }}">{% endblock %}
+{% block head %}
+<meta name="csrf-token" content="{{ token }}">{% endblock %}
 {% block title %}{{ title }}{% endblock %}
 {% block content %}
 {% load static %}
-    <main role="main">
-    {{ phone.number }}
+<main role="main">
+  {{ phone.number }}
 
-      <!-- Marketing messaging and featurettes
+  <!-- Marketing messaging and featurettes
       ================================================== -->
-      <!-- Wrap the rest of the page in another container to center all the content. -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
 
-      <div class="container marketing mt-5">
+  <div class="container marketing mt-5">
 
-        <!-- START THE FEATURETTES -->
+    <!-- START THE FEATURETTES -->
 
-        <div class="row featurette">
-          <div class="col-md-7">
-{#            <h5>First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h5>#}
-{#            <p>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>#}
-              <h5>{{ contact.header_text }}</h5>
-              {% autoescape off %}{{ contact.text }}{% endautoescape %}
-              <a href="{{ contact.file.url }}">{% trans 'Карточка контрагента'%}</a>
+    <div class="row featurette">
+      <div class="col-md-7">
+        {#            <h5>First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h5>#}
+        {#            <p>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>#}
+        <h5>{{ contact.header_text }}</h5>
+        {% autoescape off %}{{ contact.text }}{% endautoescape %}
+        <a href="{{ contact.file.url }}">{% trans 'Карточка контрагента'%}</a>
+      </div>
+      <div class="col-md-5">
+        <script type="text/javascript" charset="utf-8" async
+          src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0f6ee70ec3c370da5a46cdd3ec80927b6100384f9081f53d14c17a7b67a7ba06&amp;width=418&amp;height=418&amp;lang=ru_RU&amp;scroll=true"></script>
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+    <div class="row featurette">
+      <div class="col-md-7">
+        <form action="" method="post">
+          {% csrf_token %}
+          <h5>{% trans 'Напишите нам что-нибудь '%}<i class="material-icons">tag_faces</i></h5>
+          <div class="form-group">
+            <label for="e_mail_input">{% trans 'Ваш e-mail' %}</label>
+            <input name="email" type="email" class="form-control" id="e_mail_input" placeholder="name@example.com">
+
           </div>
-          <div class="col-md-5">
-            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0f6ee70ec3c370da5a46cdd3ec80927b6100384f9081f53d14c17a7b67a7ba06&amp;width=418&amp;height=418&amp;lang=ru_RU&amp;scroll=true"></script>
+          <div class="form-group">
+            <label for="name_input">{% trans 'Представьтесь, пожалуйста' %}</label>
+            <input name="name" type="text" class="form-control" id="name_input" placeholder="{% trans 'Иван' %}">
           </div>
-        </div>
+          <div class="form-group">
+            <label for="phone_input">{% trans 'Номер телефона ' %}<span
+                class="text-muted">{% trans '(необязательно)' %}</span></label>
+            <input name="name" type="text" class="form-control" id="phone_input" placeholder="+74992815535">
+          </div>
+          {#              <div class="form-group">#}
+          {#                <label for="exampleFormControlSelect1">Example select</label>#}
+          {#                <select class="form-control" id="exampleFormControlSelect1">#}
+          {#                  <option>1</option>#}
+          {#                  <option>2</option>#}
+          {#                  <option>3</option>#}
+          {#                  <option>4</option>#}
+          {#                  <option>5</option>#}
+          {#                </select>#}
+          {#              </div>#}
+          {#              <div class="form-group">#}
+          {#                <label for="exampleFormControlSelect2">Example multiple select</label>#}
+          {#                <select multiple class="form-control" id="exampleFormControlSelect2">#}
+          {#                  <option>1</option>#}
+          {#                  <option>2</option>#}
+          {#                  <option>3</option>#}
+          {#                  <option>4</option>#}
+          {#                  <option>5</option>#}
+          {#                </select>#}
+          {#              </div>#}
+          <div class="form-group">
+            <label for="text">{% trans 'Текст сообщения' %}</label>
+            <textarea name="text" class="form-control" id="text" rows="3"></textarea>
+          </div>
+          <div class="form-group">
+            {#                  <div class="g-recaptcha" data-sitekey="6LeLPqAUAAAAACA1yUnkWfmIQaNHlu6kPINcYk2l"></div>#}
+            <button type="button" class="snd-btn btn btn-primary mb-2">{% trans 'Отправить' %}</button>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-5">
+        <figure>
+          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image centered-and-cropped img-fluid mx-auto"
+            src="{% static 'images/hands_on_keyboard.jpg' %}" style="height: 500px;">
+        </figure>
+      </div>
+    </div>
 
-        <hr class="featurette-divider">
-        <div class="row featurette">
-            <div class="col-md-7">
-                <form action="" method="post">
-                    {% csrf_token %}
-            <h5>{% trans 'Напишите нам что-нибудь '%}<i class="material-icons">tag_faces</i></h5>
-              <div class="form-group">
-                <label for="e_mail_input">{% trans 'Ваш e-mail' %}</label>
-                <input name="email" type="email" class="form-control" id="e_mail_input" placeholder="name@example.com">
+    <hr class="featurette-divider">
+    <!-- /END THE FEATURETTES -->
 
-              </div>
-              <div class="form-group">
-                <label for="name_input">{% trans 'Представьтесь, пожалуйста' %}</label>
-                <input name="name" type="text" class="form-control" id="name_input" placeholder="{% trans 'Иван' %}">
-              </div>
-              <div class="form-group">
-                <label for="phone_input">{% trans 'Номер телефона ' %}<span class="text-muted">{% trans '(необязательно)' %}</span></label>
-                <input name="name" type="text" class="form-control" id="phone_input" placeholder="+74992815535">
-              </div>
-{#              <div class="form-group">#}
-{#                <label for="exampleFormControlSelect1">Example select</label>#}
-{#                <select class="form-control" id="exampleFormControlSelect1">#}
-{#                  <option>1</option>#}
-{#                  <option>2</option>#}
-{#                  <option>3</option>#}
-{#                  <option>4</option>#}
-{#                  <option>5</option>#}
-{#                </select>#}
-{#              </div>#}
-{#              <div class="form-group">#}
-{#                <label for="exampleFormControlSelect2">Example multiple select</label>#}
-{#                <select multiple class="form-control" id="exampleFormControlSelect2">#}
-{#                  <option>1</option>#}
-{#                  <option>2</option>#}
-{#                  <option>3</option>#}
-{#                  <option>4</option>#}
-{#                  <option>5</option>#}
-{#                </select>#}
-{#              </div>#}
-              <div class="form-group">
-                <label for="text">{% trans 'Текст сообщения' %}</label>
-                <textarea name="text" class="form-control" id="text" rows="3"></textarea>
-              </div>
-              <div class="form-group">
-{#                  <div class="g-recaptcha" data-sitekey="6LeLPqAUAAAAACA1yUnkWfmIQaNHlu6kPINcYk2l"></div>#}
-                  <button type="button" class="snd-btn btn btn-primary mb-2">{% trans 'Отправить' %}</button>
-              </div>
-                </form>
-                </div>
-            <div class="col-md-5">
-                <figure>
-                     <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image centered-and-cropped img-fluid mx-auto" src="{% static 'images/hands_on_keyboard.jpg' %}" style="height: 500px;">
-                </figure>
-            </div>
-        </div>
-
-            <hr class="featurette-divider">
-        <!-- /END THE FEATURETTES -->
-
-      </div><!-- /.container -->
-    </main>
-    <script src="https://www.google.com/recaptcha/api.js?render=6LeLPqAUAAAAACA1yUnkWfmIQaNHlu6kPINcYk2l"></script>
+  </div><!-- /.container -->
+</main>
+<script src="https://www.google.com/recaptcha/api.js?render=6LeLPqAUAAAAACA1yUnkWfmIQaNHlu6kPINcYk2l"></script>
 {% block footer %}{% endblock %}
 {% endblock %}

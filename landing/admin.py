@@ -4,7 +4,7 @@ from modeltranslation.admin import TabbedTranslationAdmin, TranslationAdmin
 import landing.translations
 
 # Register your models here.
-from models import Slide, Options, Contact, About, Phone, Partners, Features
+from models import Options, Contact, About, Phone, Partners, Features
 
 
 # Apply summernote to all TextField in model.
@@ -14,7 +14,7 @@ class OptionsModelAdmin(SummernoteModelAdmin, TabbedTranslationAdmin):  # instea
 class TransAdmin(TabbedTranslationAdmin):
     pass
 
-admin.site.register(Slide, OptionsModelAdmin)
+
 admin.site.register(Contact, OptionsModelAdmin)
 admin.site.register(About, OptionsModelAdmin)
 admin.site.register(Options, OptionsModelAdmin)

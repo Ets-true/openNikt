@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from modeltranslation.translator import translator, TranslationOptions
-from models import Slide, Options, Contact, About, Features
+from models import  Options, Contact, About, Features
 
 class SlideTranslationOptions(TranslationOptions):
     """
@@ -38,7 +38,6 @@ class FeaturesTranslationOptions(TranslationOptions):
     fields = ('header_text', 'subheader_text', )
 
 
-translator.register(Slide, SlideTranslationOptions)
 translator.register(Options, OptionsTranslationOptions)
 translator.register(Contact, ContactTranslationOptions)
 translator.register(About, AboutTranslationOptions)

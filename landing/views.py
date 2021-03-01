@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import render, get_object_or_404, HttpResponse
-from models import Slide, Contact, Options, About, Partners, Features, Phone
+from models import Contact, Options, About, Partners, Features, Phone
 from django.middleware.csrf import get_token
 import requests
 from django.utils.translation import ugettext as _
@@ -32,11 +32,11 @@ phone_number=Phone.objects.last()
 options_list=Options.objects.all().order_by('id')
 
 def home_view(request):
-    slides_list=Slide.objects.all()
+    
     partners_list=Partners.objects.all()
     features_list=Features.objects.all()
     page_url = request.path
-    context = {'slides': slides_list, 'options': options_list, 'page': page_url, \
+    context = {'options': options_list, 'page': page_url, \
                               "partners":partners_list, "title": _(u"IT компания"), "phone": phone_number,\
                               "features": features_list}
     return render(request, 'home.html', context)
@@ -62,9 +62,7 @@ def features_view(request, feature_slug):
     feature = get_object_or_404(Features, slug=feature_slug)
     return render(request, 'features.html', {'feature': feature, "phone": phone_number})
 
-def slides_view(request, slide_slug):
-    slide = get_object_or_404(Slide, slug=slide_slug)
-    return render(request, 'slides.html', {'slide': slide, 'phone': phone_number})
+#  def slides_view(request, slide_slug):
+#     slide = get_object_or_404(Slide, slug=slide_slug)
+#     return render(request, 'slides.html', {'slide': slide, 'phone': phone_number})
 
-def undr_const(request):
-    return render(request, 'under_const.html')
