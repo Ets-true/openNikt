@@ -9,11 +9,20 @@
     left: 0;
     z-index: 3;
     background-color: #fff;
+
+    border: 2px;
+    border-color:rgba(0, 0, 0, 0.3);
+
+    border-bottom-style: solid;
+    border-left-style: solid;
+    border-right-style: solid;
+
     
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    
 
-    opacity: 0.4;
+    /* opacity: 0.4; */
     
 }
 
@@ -63,12 +72,13 @@
 }
 .menu__list {
     display: flex;
-    
+    margin-right: 100px;
     
 }
 .menu__list li{
     list-style: none;
-    margin: 26px 0px 0px 80px;
+    margin: 26px 0px 0px 120px;
+    
     
 }
 .menu__item {
@@ -77,7 +87,7 @@
 
 .menu__link {
     color: grey;
-    font-size: 20px;
+    font-size: 18.5px;
     text-decoration: none;
 }
 .menu__link:hover{
@@ -150,7 +160,7 @@
 }
 .phone__link {
     color: grey;
-    font-size: 20px;
+    font-size: 17px;
     text-decoration: none;
 }
 .phone__link:hover{
