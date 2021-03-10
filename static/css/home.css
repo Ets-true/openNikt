@@ -414,7 +414,7 @@ body {
     margin-left: 7.5%;
     margin-right: 7.5%;
     height: 800px;
-    background-color: blue;
+    background-color: #fff;
     z-index: 2;
     position: relative;
 }
@@ -425,7 +425,7 @@ body {
     font-size: 20px;
    
     top:7.5%;
-    left: 37%;
+    left: 34%;
     background-color: #fff;
 }
 
@@ -435,15 +435,20 @@ body {
     height: 40px;
     top:33%;
     left:15%;
+    border-radius: 20px;
+    opacity: 0.6;
     background-color:black;
 
 }
 .slideshow_2__next {
+    
     position: absolute;
     width:40px;
     height: 40px;
     top:33%;
     right:15%;
+    border-radius: 20px;
+    opacity: 0.6;
     background-color:black;
 
 }
@@ -455,7 +460,7 @@ body {
 
     width: 60%;
     height: 30%;
-    background-color: yellow;
+    /* background-color: yellow; */
     /* opacity: 0.4; */
     border-radius: 15px;
     position: relative;
@@ -465,15 +470,18 @@ body {
 
 .slider_2__example_1 {
     
-    background-color: red;
+    /* background-color: red; */
     width: 100%;
     height: 1080px;
-    /* border-radius: 15px; */
+    border-radius: 15px;
     /* z-index:150; */
+    display: flex;
+    position: relative;
+    
 }
 .slider_2__example_2 {
     
-    background-color: blue;
+    /* background-color: blue; */
     width: 100%;
     height:100%;
     /* border-radius: 15px; */
@@ -481,9 +489,61 @@ body {
 }
 .slider_2__example_3 {
     
-    background-color: green;
+    /* background-color: green; */
     width: 100%;
     height: 100%;
     /* border-radius: 15px; */
     /* z-index:150; */
+}
+
+.slider_2__image{
+    
+    
+    margin-top: 10px;
+    margin-left: 30%;
+    
+    width: auto;
+    height: 50px;
+    border: 3px;
+    border-radius: 15px;
+    border-style:solid;
+    border-color: #DCDCDC;
+}
+
+.slideshow_2 .fa-chevron-left{
+    color:white;
+    font-size: 20px;
+    
+    margin-top: 10px;
+    margin-left: 12px;
+}
+
+.slideshow_2 .fa-chevron-right{
+    color:white;
+
+    font-size: 20px;
+    margin-top: 10px;
+    margin-left: 14px;
+}
+
+.slideshow .fa-chevron-left{
+    color: black;
+    font-size: 40px;
+    opacity: 0.8;
+    margin-top: 100%;
+    margin-left: 17%;
+
+    
+    z-index: 3;
+}
+
+.slideshow .fa-chevron-right{
+    color: black;
+    font-size: 40px;
+    opacity: 0.8;
+    margin-top: 100%;
+    margin-left: 17%;
+
+    
+    z-index: 3;
 }

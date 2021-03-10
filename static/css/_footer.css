@@ -4,7 +4,7 @@
     position: absolute;
     background-color: #DCDCDC;
     width: 100%;
-    height: 100px;
+    height: 90px;
     /* z-index:-2; */
     position: relative;
     
@@ -38,13 +38,13 @@
 .footer__info{
     position: absolute;
     top:5%;
-    left:10%;
+    left:8%;
     
 }
 
 .footer__date{
     position: absolute;
     top: 30%;
-    left: 10%
+    left: 8%
     
 }
