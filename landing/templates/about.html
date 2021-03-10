@@ -2,12 +2,16 @@
 {% block title %}{{ title }}{% endblock %}
 {% block content %}
 {% load static %}
-<main role="main">
-  <!-- Marketing messaging and featurettes
-      ================================================== -->
-  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+<div class="about">
+  <div class="about__notification">
+    Страница "О компании" на данный момент находится в разработке
+  </div>
+</div>
+<!-- <main role="main">
+  
   <div class="container mt-5">
-    <!-- START THE FEATURETTES -->
+    
     {% for about in abouts %}
     <div class="row featurette">
       <div class="col-md-7">
@@ -27,8 +31,10 @@
     </div>
     <hr class="featurette-divider">
     {% endfor %}
-    <!-- /END THE FEATURETTES -->
-  </div><!-- /.container -->
-</main>
+    
+  </div>
+</main> -->
+
+
 {% block footer %}{% endblock %}
 {% endblock %}
