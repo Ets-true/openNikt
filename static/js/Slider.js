@@ -13,7 +13,8 @@ $('.slideshow_2__slider_2').slick({
      speed: 800,
      nextArrow: '.slideshow_2__next',
      prevArrow: '.slideshow_2__prev',
-     dots: false,
+     dots: false, //Исправить точки
      infinite: true,
+     
      
 }); 

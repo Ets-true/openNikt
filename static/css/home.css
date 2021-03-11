@@ -168,7 +168,7 @@ body {
     margin-left: 7.5%;
     margin-right: 7.5%;
     height: 875px;
-    background-color: blue;
+    /* background-color: blue; */
     z-index: 2;
     display:flex;
     position: relative;
@@ -255,7 +255,7 @@ body {
     margin-left: 7.5%;
     margin-right: 7.5%;
     height: 875px;
-    background-color: blue;
+    /* background-color: blue; */
     z-index: 2;
     display:flex;
     position: relative;
