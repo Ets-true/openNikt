@@ -4,7 +4,8 @@ $('.slideshow__slider').slick({
     nextArrow: '.slideshow__next',
     prevArrow: '.slideshow__prev',
     dots: false,
-    infinite: true
+    infinite: true,
+    focusOnSelect: false,
 });
 
 
