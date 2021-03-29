@@ -44,9 +44,23 @@
   <!-- Стили шапки сайта -->
   <link href="{% static 'css/_nav.css'%}" rel="stylesheet">
   <link href="{% static 'css/_footer.css'%}" rel="stylesheet">
+  <link href="{% static 'css/_scrollUp.css'%}" rel="stylesheet">
+
   <link href="{% static 'css/home.css'%}" rel="stylesheet">
+  <link href="{% static 'css/home__slideshow.css'%}" rel="stylesheet">
+  <link href="{% static 'css/home__develop.css'%}" rel="stylesheet">
+  <link href="{% static 'css/home__accompany.css'%}" rel="stylesheet">
+  <link href="{% static 'css/home__security.css'%}" rel="stylesheet">
+  <link href="{% static 'css/home__clients_partners.css'%}" rel="stylesheet">
+  
+
+
   <link href="{% static 'css/about.css'%}" rel="stylesheet">
+
   <link href="{% static 'css/contacts.css'%}" rel="stylesheet">
+  <link href="{% static 'css/contacts__chat.css'%}" rel="stylesheet">
+  <link href="{% static 'css/contacts__map.css'%}" rel="stylesheet">
+
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
 </head>
@@ -58,7 +72,9 @@
   {% block content %}
 
   {% endblock %}
+  
 
+  {% include "_scrollUp.html" %}
   {% include "_footer.html" %}
 
   

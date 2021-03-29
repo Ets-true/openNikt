@@ -1,86 +1,106 @@
 {% extends "__base.html" %}
 {% load i18n %}
+
 {% block head %}
-<meta name="csrf-token" content="{{ token }}">{% endblock %}
+<meta name="csrf-token" content="{{ token }}">
+{% endblock %}
+
 {% block title %}{{ title }}{% endblock %}
+
+
 {% block content %}
 {% load static %}
 
-<div class="contacts">
+<!-- <div class="contacts">
   <div class="contacts__notification">
     Страница "Контакты" на данный момент находится в разработке
   </div>
-</div>
-{% block footer %}
-{% endblock %}
+</div> -->
 
-<!-- <main role="main">
-  {{ phone.number }}
 
-  
 
-  <div class="container marketing mt-5">
 
-   
 
-    <div class="row featurette">
-      <div class="col-md-7">
-        {#            <h5>First featurette heading. <span class="text-muted">It’ll blow your mind.</span></h5>#}
-        {#            <p>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>#}
-        <h5>{{ contact.header_text }}</h5>
-        {% autoescape off %}{{ contact.text }}{% endautoescape %}
-        <a href="{{ contact.file.url }}">{% trans 'Карточка контрагента'%}</a>
+
+
+
+<div class="contacts">
+
+
+ 
+  <div class="contacts__chat">
+    <div class="chat__content">
+
+      <div class="chat__title title">
+        <h2 class="title__content">{% trans 'Связаться с нами '%} </h2>
       </div>
-      <div class="col-md-5">
-        <script type="text/javascript" charset="utf-8" async
-          src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0f6ee70ec3c370da5a46cdd3ec80927b6100384f9081f53d14c17a7b67a7ba06&amp;width=418&amp;height=418&amp;lang=ru_RU&amp;scroll=true"></script>
-      </div>
-    </div>
 
-    <hr class="featurette-divider">
-    <div class="row featurette">
-      <div class="col-md-7">
-        <form action="" method="post">
+      <div class="chat__form form">
+        <form class="form__content" action="" method="post">
           {% csrf_token %}
-          <h5>{% trans 'Напишите нам что-нибудь '%}<i class="material-icons">tag_faces</i></h5>
-          <div class="form-group">
-            <label for="e_mail_input">{% trans 'Ваш e-mail' %}</label>
-            <input name="email" type="email" class="form-control" id="e_mail_input" placeholder="name@example.com">
 
+          <!-- <i class="material-icons">tag_faces</i> -->
+
+
+          <div class="form__name name">
+            <input class="name__input input" id="name__input_id" name="name" type="text"
+              placeholder="{% trans 'Ваше имя' %}">
           </div>
-          <div class="form-group">
-            <label for="name_input">{% trans 'Представьтесь, пожалуйста' %}</label>
-            <input name="name" type="text" class="form-control" id="name_input" placeholder="{% trans 'Иван' %}">
+
+          <div class="form__phone phone">
+            <input class="phone__input input" id="phone__input_id" name="phone" type="text"
+              placeholder="{% trans 'Ваш номер телефона' %}">
           </div>
-          <div class="form-group">
-            <label for="phone_input">{% trans 'Номер телефона ' %}<span
-                class="text-muted">{% trans '(необязательно)' %}</span></label>
-            <input name="name" type="text" class="form-control" id="phone_input" placeholder="+74992815535">
+
+          <div class="form__email email">
+            <input class="email__input input" id="email__input_id" name="email" type="email"
+              placeholder="{% trans 'Ваш e-mail' %}">
           </div>
-          
-          <div class="form-group">
-            <label for="text">{% trans 'Текст сообщения' %}</label>
-            <textarea name="text" class="form-control" id="text" rows="3"></textarea>
+
+
+
+          <div class="form__message message">
+            <textarea class="message__input" id="message__input_id" name="text"
+              placeholder="{% trans 'Текст сообщения' %}"></textarea>
           </div>
-          <div class="form-group">
-           
-            <button type="button" class="snd-btn btn btn-primary mb-2">{% trans 'Отправить' %}</button>
+
+          <div class="form__button button">
+            <button class="button__input" type="button">{% trans 'Отправить' %}</button>
           </div>
+
         </form>
       </div>
-      <div class="col-md-5">
-        <figure>
-          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image centered-and-cropped img-fluid mx-auto"
-            src="{% static 'images/hands_on_keyboard.jpg' %}" style="height: 500px;">
-        </figure>
-      </div>
     </div>
 
-    <hr class="featurette-divider">
-    
-
   </div>
-</main>
-<script src="https://www.google.com/recaptcha/api.js?render=6LeLPqAUAAAAACA1yUnkWfmIQaNHlu6kPINcYk2l"></script>
 
-{% endblock %} -->
+  <div class="contacts__map map">
+    <div class="map__content">
+      <div class="map__title title">
+        <h2 class="title__content">{% trans 'Добраться до нас'%} </h2>
+      </div>
+
+      <div class="map__info">
+        <div class="map__adress">
+          <p>Адрес: РФ, 121087 г. Москва, ул. Барклая, дом 6, строение 5, этаж 5, комната 22л.</p>
+        </div>
+        <div class="map__yandexMap">
+          <script type="text/javascript" charset="utf-8" async
+          src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A371db7f5fb3518dc986a3d0a6f648551a487b47aee5191242fad67dc1800cea3&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=true"></script>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+
+
+
+
+
+
+<!-- <script src="https://www.google.com/recaptcha/api.js?render=6LeLPqAUAAAAACA1yUnkWfmIQaNHlu6kPINcYk2l"></script> -->
+
+{% endblock %}
+

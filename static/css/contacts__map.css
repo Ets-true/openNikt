@@ -1,0 +1,65 @@
+.contacts__map {
+    width: 85%;
+    margin-right: 7.5%;
+    margin-left: 7.5%;
+    height: 100vh;
+    /* background-color: red; */
+    /* display: none; */
+   
+}
+
+.map__content{
+    width: 85%;
+    height: 100%;
+    max-width: 1500px;
+    margin:auto;
+   
+    /* background-color: orange; */
+    position: relative;
+
+    
+}
+
+.map__title{
+    position: absolute;
+    top: 20%;
+    width: 100%;
+    text-align: center;
+    /* background-color: blue; */
+
+}
+
+
+
+.map__info{
+    /* position: absolute;
+    bottom: 0;
+    left: 0; */
+    position: absolute;
+    top: 30%;
+    left: 7.5%;
+    /* right: 7.5%; */
+    width: 85%;
+    height: 50%;
+    max-width: 1500px;
+    /* margin:auto; */
+    /* background-color: yellow; */
+    position: relative;
+}
+.map__adress{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    /* background-color: green; */
+    text-align: center;
+}
+.map__yandexMap{
+    position: absolute;
+    top: 10%;
+    left: 0%;
+    width: 100%;
+    height: 90%;
+    /* background-color: grey; */
+}

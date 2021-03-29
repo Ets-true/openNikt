@@ -1,0 +1,84 @@
+/* Создание IT-инфраструктуры */
+.home__develop {
+    margin-top: 50px;
+    width: 100%;
+
+    height: 100vh;
+
+    /* background-color: blue; */
+    position: relative;
+    /* font-family: "Open Sans", sans-serif; */
+}
+
+.develop__content {
+    margin-top: 0%;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 100%;
+    /* width: 100%; */
+    /* max-width: 2000px; */
+
+    /* background-color: blue; */
+    z-index: 2;
+    display: flex;
+    position: relative;
+    /* background-color: red; */
+    /* display: none; */
+}
+
+.develop__column_left {
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    position: relative;
+}
+
+.develop__text {
+}
+.develop__title {
+    position: absolute;
+    background-color: #fff;
+    top: 10%;
+    left: 0;
+    font-size: 28px;
+}
+.develop__info {
+    position: absolute;
+    background-color: #fff;
+    top: 17%;
+    left: 0;
+    font-size: 22px;
+    line-height: 50px;
+    width: 90%;
+    text-align: justify;
+}
+
+.develop__column_right {
+    /* background-color: #DCDCDC; */
+    position: absolute;
+    top: 7.5%;
+    right: 0;
+    width: 40%;
+    height: 80%;
+    position: relative;
+}
+
+.develop__image {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+    /* background-color: red; */
+    border-radius: 15px;
+
+    background-image: url(/static/media/home/slides/test_3.jpg);
+    background-size: cover;
+}
+/* .develop_image > im{
+width: auto;
+height:auto;
+} */

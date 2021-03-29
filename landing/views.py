@@ -14,8 +14,8 @@ def send_message(request):
             phone = request.POST['phone']
             message = request.POST['text']
 
-            bot_token = '768364819:AAHyomyBg_2vf7ll1de2FtNHSJrZdcuvL0E'
-            bot_chatID = '1001403044490'
+            # bot_token = '768364819:AAHyomyBg_2vf7ll1de2FtNHSJrZdcuvL0E'
+            # bot_chatID = '1001403044490'
             send_text = 'https://api.telegram.org/bot' + bot_token + '/sendMessage?chat_id=-' + bot_chatID + \
                         '&parse_mode=Markdown&text=' + u'Имя: ' + name + "\n" + u'Номер телефона: ' + phone + '\n' + \
                         'e-mail: ' + e_mail + "\n" + u'Текст сообщения: ' + message
@@ -62,7 +62,5 @@ def features_view(request, feature_slug):
     feature = get_object_or_404(Features, slug=feature_slug)
     return render(request, 'features.html', {'feature': feature, "phone": phone_number})
 
-#  def slides_view(request, slide_slug):
-#     slide = get_object_or_404(Slide, slug=slide_slug)
-#     return render(request, 'slides.html', {'slide': slide, 'phone': phone_number})
+
 
