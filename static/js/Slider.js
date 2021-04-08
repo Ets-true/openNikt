@@ -12,8 +12,8 @@ $('.slideshow__slider').slick({
 $('.slideshow_2__slider_2').slick({
      slidesToShow: 1,
      autoplay: true,
-     autoplaySpeed: 100,
-     speed: 800,
+     autoplaySpeed: 2000,
+     speed: 1600,
      nextArrow: '.slideshow_2__next',
      prevArrow: '.slideshow_2__prev',
      dots: false, //Исправить точки

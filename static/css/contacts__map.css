@@ -9,7 +9,7 @@
 }
 
 .map__content{
-    width: 85%;
+    width: 100%;
     height: 100%;
     max-width: 1500px;
     margin:auto;
@@ -20,46 +20,48 @@
     
 }
 
-.map__title{
+.map__column_left{
     position: absolute;
-    top: 20%;
-    width: 100%;
-    text-align: center;
-    /* background-color: blue; */
-
-}
-
-
-
-.map__info{
-    /* position: absolute;
-    bottom: 0;
-    left: 0; */
-    position: absolute;
-    top: 30%;
-    left: 7.5%;
-    /* right: 7.5%; */
-    width: 85%;
-    height: 50%;
-    max-width: 1500px;
-    /* margin:auto; */
-    /* background-color: yellow; */
-    position: relative;
-}
-.map__adress{
-    position: absolute;
-    top:0;
     left: 0;
-    width: 100%;
-    height: 10%;
-    /* background-color: green; */
-    text-align: center;
+    top: 0;
+    width: 35%;
+    height: 100%;
+    /* background-color: red; */
+    
 }
-.map__yandexMap{
-    position: absolute;
-    top: 10%;
-    left: 0%;
-    width: 100%;
-    height: 90%;
+.map__info{
+    width: 90%;
+    height: 60%;
+    margin: auto;
+    margin-top: 39%;
     /* background-color: grey; */
+    font-size: 20px;
+    
 }
+.map__download{
+    text-decoration: none;
+}
+
+.map__column_right{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 65%;
+    height: 100%;
+    /* background-color: blue; */
+    
+}
+
+.map__yandexMap{
+    width: 100%;
+    height: 60%;
+    margin: auto;
+    margin-top: 20%;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-image: url(/static/media/contacts/yandexMap.jpg);
+    background-size: cover;
+}
+
+
+
+

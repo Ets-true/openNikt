@@ -33,9 +33,12 @@
     .header__column {
     }
     .header__column_logo {
-        margin-top: 15px;
+        /* margin-top: 15px; */
+        margin-top: 10px;
         margin-left: 60px;
+        /* margin-left: 120px; */
 
+        /* width: 200px; */
         width: 170px;
         height: auto;
     }
@@ -47,38 +50,25 @@
         height: auto;
     }
 
-    .header__logo {
-    }
-    .header__burger {
-    }
-    .header__nav {
-    }
-    .nav {
-    }
-    .nav__menu {
-    }
-    .menu {
-    }
+    
     .menu__list {
         display: flex;
         margin-right: 100px;
         /* background-color: red; */
-        font-size: 26px;
+        font-size: 24px;
     }
     .menu__list li {
         list-style: none;
-        margin-top: 26px;
+        margin-top: 23px;
         /* margin-right: 90px; */
         margin-right: 70px;
         margin-left: 70px;
         /* margin-left: 90px; */
     }
-    .menu__item {
-    }
+    
 
     .menu__link {
         color: black;
-        
         text-decoration: none;
     }
     .menu__link:hover {
@@ -132,34 +122,33 @@
 } */
 
     .header__contact {
-        /* background-color: red; */
-        margin-top: 27px;
+        margin-top: 24px;
         margin-right: 60px;
     }
     .contact {
         display: flex;
-        /* margin: 27px 20px 0px 0px; */
     }
     .contact__icon {
         color: black;
     }
-    .contact__phone {
-    }
-    .phone {
-    }
+    
     .phone__link {
         color: black;
-        font-size: 26px;
+        font-size: 22px;
         text-decoration: none;
     }
     .phone__link:hover {
         color: #001a54;
     }
-    @media (max-width: 2000px){
-        .header__column_logo {
-            width: calc(140px + (170 - 140) * ((100vw - 1338px) / (2000 - 1338)));
-        }
-        .menu__list {
+    @media (max-width: 1920px){
+        /* .header__column_logo {
+            width: calc(170px + (190 - 170) * ((100vw - 1920px) / (2000 - 1920)));
+            margin-top: calc(10px + (15 - 10) * ((100vw - 1920px) / (2000 - 1920)));
+            margin-left: calc(60px + (120 - 60) * ((100vw - 1920px) / (2000 - 1920)));
+
+            
+        } */
+        /* .menu__list {
             font-size: calc(18px + (26 - 18) * ((100vw - 1338px) / (2000 - 1338)));
         }
         .menu__list li {
@@ -168,8 +157,18 @@
         }
         .phone__link {
             font-size: calc(18px + (26 - 18) * ((100vw - 1338px) / (2000 - 1338)));
+        } */
+    }
+
+    @media (max-width: 1919px) {
+        .header__column_logo {
+            
         }
     }
+
+    /* @media (max-width: 768px) {
+
+    } */
 
 
 
