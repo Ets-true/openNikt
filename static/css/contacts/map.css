@@ -1,0 +1,56 @@
+.contacts__map {
+    margin-right: 7.5%;
+    margin-left: 7.5%;
+    width: 85%;
+    height: 100vh;
+}
+
+.map__content{
+    margin:auto;
+    width: 100%;
+    max-width: 1500px;
+    height: 100%;
+    position: relative;
+}
+
+.map__column_left{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35%;
+    height: 100%;    
+}
+
+.map__info{
+    margin: auto;
+    margin-top: 39%;
+    width: 90%;
+    height: 60%;
+    font-size: 20px;
+}
+
+.map__download{
+    text-decoration: none;
+}
+
+.map__column_right{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 65%;
+    height: 100%;    
+}
+
+.map__yandexMap{
+    margin: auto;
+    margin-top: 20%;
+    width: 100%;
+    height: 60%;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-image: url(/static/media/contacts/yandexMap.jpg);
+    background-size: cover;
+}
+
+
+
+

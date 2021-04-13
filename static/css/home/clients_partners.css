@@ -1,0 +1,116 @@
+.home__clients_partners {
+    margin-top: 200px;
+    width: 100%;
+    height: 800px;
+    background-color: #fff;
+}
+
+.clients_partners__slideshow_2 {
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+    height: 800px;
+    z-index: 2;
+    position: relative;
+    background-color: #fff;
+}
+
+.slideshow_2__title {
+    position: absolute;
+    top: 7.5%;
+    left: 35%;
+    font-size: 20px;
+    background-color: #fff;
+}
+
+.slideshow_2__prev {
+    position: absolute;
+    top: 33%;
+    left: 15%;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    opacity: 0.6;
+    background-color: black;
+}
+.slideshow_2__next {
+    position: absolute;
+    top: 33%;
+    right: 15%;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    opacity: 0.6;
+    background-color: black;
+}
+
+.slideshow_2__slider_2 {
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    width: 60%;
+    height: 30%;
+    border-radius: 15px;
+    position: relative;
+}
+
+.slider_2__example_1 {
+    width: 100%;
+    height: 1080px;
+    display: flex;
+    border-radius: 15px;
+    position: relative;
+    outline: none;
+}
+.slider_2__example_2 {
+    width: 100%;
+    height: 100%;
+    outline: none;
+}
+.slider_2__example_3 {
+    width: 100%;
+    height: 100%;
+    outline: none;
+}
+
+.slider_2__image {
+    margin-top: 10px;
+    margin-left: 30%;
+    width: auto;
+    height: 50px;
+    border: 3px;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: #dcdcdc;
+}
+
+.slideshow_2 .fa-chevron-left {
+    margin-top: 10px;
+    margin-left: 12px;
+    font-size: 20px;
+    color: white;
+}
+
+.slideshow_2 .fa-chevron-right {
+    margin-top: 10px;
+    margin-left: 14px;
+    font-size: 20px;
+    color: white;
+}
+
+.slideshow .fa-chevron-left {
+    margin-top: 100%;
+    margin-left: 17%;
+    z-index: 3;
+    font-size: 40px;
+    opacity: 0.8;
+    color: black;
+}
+
+.slideshow .fa-chevron-right {
+    margin-top: 100%;
+    margin-left: 17%;
+    z-index: 3;
+    font-size: 40px;
+    opacity: 0.8;
+    color: black;
+}
