@@ -6,6 +6,24 @@ body {
 .home {
     font-family: "Open Sans", sans-serif;
 }
+.attantion_mobile{
+    display: none;
+}
+
+@media(max-width: 768px){
+    .home{
+        display: none;
+    }
+    .attantion_mobile{
+        position: absolute;
+        top:20%;
+        left:10%;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 40px;
+        color: #DCDCDC;
+        display: block;
+    }
+}
 
 
 

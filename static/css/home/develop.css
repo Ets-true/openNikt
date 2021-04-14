@@ -6,8 +6,9 @@
 
 .develop__content {
     margin-top: 0%;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin:auto;
+    width: 85%;
+    max-width: 1800px;
     height: 100%;
     z-index: 2;
     display: flex;
@@ -42,6 +43,37 @@
     line-height: 45px;
     text-align: justify;
     background-color: #fff;
+}
+
+@media(min-width: 769px) and (max-width: 1022px) {
+    .develop__title {
+        font-size: 18px;
+    }
+    .develop__info {
+        font-size: 12px;
+        line-height: 28px;
+    }
+}
+
+@media(min-width: 1023px) and (max-width: 1439px) {
+    .develop__title {
+        font-size: 22px;
+    }
+    .develop__info {
+        font-size: 16px;
+        line-height: 32px;
+    }
+
+}
+
+@media(min-width: 1919px) {
+    .develop__title {
+        font-size: 32px;
+    }
+    .develop__info {
+        font-size: 28px;
+        line-height: 50px;
+    }
 }
 
 .develop__column_right {

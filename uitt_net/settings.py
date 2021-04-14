@@ -43,7 +43,8 @@ if DEPLOY:
 
 UNDER_CONSTRUCTION = False
 
-ALLOWED_HOSTS = ["192.168.10.182", "web.devel", "web.deploy", "127.0.0.1"]
+#ALLOWED_HOSTS = ["192.168.10.182", "web.devel", "web.deploy", "127.0.0.1"]
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition

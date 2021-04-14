@@ -18,6 +18,7 @@
     text-align:center;
 }
 
+
 .home__scrollUp_active {
     outline: none;
     visibility: visible;
@@ -25,8 +26,54 @@
     transform: translateY(0);
 }
 
+
 .scrollUp__icon{
     margin-top: 5px;
     font-size: 30px;
     color: #001a54;
+}
+
+@media(min-width: 769px) and (max-width: 1022px) {
+    .home__scrollUp {
+        right: 10px;
+        width: 32px;
+        height: 32px;
+        border: 3px;
+        border-style: solid;
+        border-color: #001a54;
+       
+        
+    }
+    .scrollUp__icon{
+        margin-top: 4px;
+        font-size: 20px;
+    }
+}
+
+@media(min-width: 1023px) and (max-width: 1439px) {
+    .home__scrollUp {
+        right: 30px;
+        width: 40px;
+        height: 40px;
+        
+    }
+    .scrollUp__icon{
+        margin-top: 3px;
+        font-size: 25px;
+    }
+}
+
+@media(min-width: 1919px) {
+    .home__scrollUp {
+        right: 100px;
+        width: 60px;
+        height: 60px;
+        border: 5px;
+        border-style: solid;
+        border-color: #001a54;
+    }
+    .scrollUp__icon{
+        margin-top: 5px;
+        font-size: 35px;
+    }
 }

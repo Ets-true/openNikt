@@ -21,7 +21,7 @@
 .footer__logo {
     position: absolute;
     top: 5%;
-    left: 5%;
+    left: 3%;
     width: 40px;
     height: 40px;
 }
@@ -36,4 +36,41 @@
     position: absolute;
     top: 30%;
     left: 8%
+}
+@media(max-width: 768px){
+    .footer{
+        display: none;
+    }
+}
+
+@media(min-width: 769px) and (max-width: 1022px) {
+    .footer__logo {
+        left: 0%;
+    }
+    .footer__info{
+        font-size: 14px;
+
+    }
+    .footer__date{
+        font-size: 14px;
+
+    }
+}
+
+@media(min-width: 1023px) and (max-width: 1439px) {
+
+}
+
+@media(min-width: 1919px) {
+    .footer__logo {
+        left: 5%;
+    }
+    .footer__info{
+        font-size: 18px;
+
+    }
+    .footer__date{
+        font-size: 18px;
+
+    }
 }

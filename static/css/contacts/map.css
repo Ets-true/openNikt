@@ -51,6 +51,22 @@
     background-size: cover;
 }
 
+@media(min-width: 769px) and (max-width: 1022px) {
+    .map__info{
+        font-size: 16px;
+    }
+}
 
+@media(min-width: 1023px) and (max-width: 1439px) {
+    .map__info{
+        font-size: 18px;
+    }
+}
+
+@media(min-width: 1919px) {
+    .map__info{
+        font-size: 24px;
+    }
+}
 
 
