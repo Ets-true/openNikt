@@ -162,6 +162,34 @@
     border-style: solid;
 }
 
+@media(max-width: 768px){
+    .slider__text_1 {
+        font-size: 30px;
+    }
+    .slider__text_2 {
+        font-size: 30px;
+    }
+    .slider__text_3 {
+        font-size: 30px;
+    }
+    .slider__button_1 {
+        width: 120px;
+        height: 35px;
+    }
+
+    .slider__button_2 {
+        width: 120px;
+        height: 35px;
+    }
+    .slider__button_3 {
+        width: 120px;
+        height: 35px;
+    }
+    .slider__link {
+        font-size: 18px;
+    }
+}
+
 @media(min-width: 769px) and (max-width: 1022px) {
     .slider__text_1 {
         font-size: 30px;

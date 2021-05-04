@@ -171,7 +171,7 @@ STATIC_URL = '/static/'
 
 if DEBUG:
     STATICFILES_DIRS = [
-        os.path.join(BASE_DIR, "/home/www/openNikt/static/"),
+        os.path.join(BASE_DIR, "/home/kirill/Niktel_landing/uitt.net/static/"),
     ]
 
 MEDIA_URL = '/media/'
