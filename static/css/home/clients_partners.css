@@ -1,9 +1,192 @@
 .home__clients_partners {
-    margin-top: 200px;
+    margin-top: 100px;
     width: 100%;
     height: 800px;
-    background-color: #fff;
+    /* background-color: blue; */
 }
+
+.clients_partners__content {
+    margin: auto;
+    height: 100%;
+    width: 85%;
+    /* background-color: green; */
+    position: relative;
+
+    
+}
+.clients_partners__line_vertical{
+    border-left: 4px solid #001a54;
+    height: 550px;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+    top: 15%;
+}
+.clients__content {
+    position: absolute;
+    top: 10%;
+    left: 2.5%;
+    width: 45%;
+    height: 80%;
+    /* background-color:yellow; */
+
+}
+.clients__title{
+    text-align: center;
+    font-size: 30px;
+}
+.clients__column_left{
+    position: absolute;
+    top:7%;
+    left:0;
+    width: 50%;
+    height: 100%;
+    /* background-color: orange; */
+}
+.clients__column_right{
+    position: absolute;
+    top:7%;
+    right:0;
+    width: 50%;
+    height: 100%;
+    /* background-color: orange; */
+}
+
+.clinets_partners__example {
+    margin:auto;
+    margin-top: 50px;
+    width: 300px;
+    height: 120px;
+    background-color: #fff;
+    border-radius: 15px;
+    border: 8px;
+    border-color: white;
+    /* border-color: #001a54; */
+    border-style: solid;
+    background-image: url(/static/media/_navbar/niktel_logo_ru.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-position: 50% 50%; */
+    /* box-shadow: 0 0 0 6px #fff, 0 0 0 12px #888; */
+    box-shadow: 0 0 4px #001a54, 0 0 10px rgba(0,0,0,0.5);
+
+}
+
+
+.clients_partners__link{
+    display: block;
+    height: 100%;
+}
+
+.clinets_partners__example:hover{
+    box-shadow: 0 0 4px #001a54;
+}
+
+.partners__content {
+    position: absolute;
+    top: 10%;
+    right: 2.5%;
+    width: 45%;
+    height: 80%;
+    /* background-color:yellow; */
+    /* position: relative; */
+
+}
+.cont{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.partners__title{
+    text-align: center;
+    font-size: 30px;
+    /* display: none; */
+}
+.partners__column_left{
+    position: absolute;
+    top:7%;
+    left:0;
+    width: 50%;
+    height: 100%;
+    /* background-color: orange; */
+    /* display: none; */
+}
+.partners__column_right{
+    position: absolute;
+    top:7%;
+    right:0;
+    width: 50%;
+    height: 100%;
+    /* background-color: orange; */
+    /* display: none; */
+}
+
+.clients__Tenex{
+    background-image: url(/static/media/home/clients/Tenex.png);
+}
+.clients__Gpbra{
+    background-image: url(/static/media/home/clients/Gpbra.png);
+}
+.clients__Bhsd{
+    background-image: url(/static/media/home/clients/Bhsd.png);
+}
+
+.clients__RosEnergoAtom{
+    background-image: url(/static/media/home/clients/RosEnergoAtom.svg);
+}
+.clients__Uranium{
+    background-image: url(/static/media/home/clients/Uranium.png);
+}
+.clients__Tgc{
+    background-image: url(/static/media/home/clients/Tgc.png);
+}
+
+
+
+
+.partners__Dell{
+    background-image: url(/static/media/home/partners/Dell.png);
+}
+.partners__Citrix{
+    background-image: url(/static/media/home/partners/Citrix.jpg);
+}
+.partners__MikroTik{
+    background-image: url(/static/media/home/partners/MikroTik.png);
+}
+
+.partners__Cisco{
+    background-image: url(/static/media/home/partners/Cisco.png);
+}
+.partners__VMware{
+    background-image: url(/static/media/home/partners/VMware.png);
+}
+.partners__Comptek{
+    background-image: url(/static/media/home/partners/Comptek.jpg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .clients_partners__slideshow_2 {
     margin-left: 7.5%;
@@ -113,6 +296,19 @@
     font-size: 40px;
     opacity: 0.8;
     color: black;
+}
+
+
+@media(max-width:768px){
+    .slideshow_2__title {
+        left: 10%;
+        font-size: 18px;
+    }
+    .slideshow_2__slider_2 {
+        left: 0;
+        width: 100%;
+        height: 30%;
+    }
 }
 
 
