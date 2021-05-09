@@ -29,6 +29,23 @@
     border-bottom-left-radius: 10px;
     background-color: white;
 }
+.slideshow .fa-chevron-left {
+    margin-top: 100%;
+    margin-left: 17%;
+    z-index: 3;
+    font-size: 40px;
+    opacity: 0.8;
+    color: black;
+}
+
+.slideshow .fa-chevron-right {
+    margin-top: 100%;
+    margin-left: 17%;
+    z-index: 3;
+    font-size: 40px;
+    opacity: 0.8;
+    color: black;
+}
 
 .slideshow__slider {
     height: 100%;

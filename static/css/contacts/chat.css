@@ -42,10 +42,12 @@
     border-color: rgba(0, 0, 0, 0.3);
     font-size: 18px;
     outline: none;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
 
 .input:focus{
-    border-color: blue;
+    border-color:#001a54;
+    box-shadow: none;
 }
 
 .message__input {
@@ -60,10 +62,12 @@
     border-color: rgba(0, 0, 0, 0.3);
     font-size: 18px;
     outline: none;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
 
 .message__input:focus{
-    border-color: blue;
+    border-color:#001a54;
+    box-shadow: none;
 }
 
 .button__input {
@@ -76,8 +80,11 @@
     border: 2px solid;
     border-color: rgba(0, 0, 0, 0.3);
     cursor: pointer;
+    font-weight: 700;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
 
 }
 .button__input:active{
-    border-color: white;
+    box-shadow: none;
+
 }
