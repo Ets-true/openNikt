@@ -10,16 +10,17 @@
 
 @media(max-width: 768px){
     .contacts{
-        display: none;
+        
     }
     .attantion_mobile{
+        display: none;
         position: absolute;
         top:20%;
         left:10%;
         font-family: 'Open Sans', sans-serif;
         font-size: 40px;
         color: #DCDCDC;
-        display: block;
+        
     }
 }
 

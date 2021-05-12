@@ -4,7 +4,7 @@
     left: 0;
     width: 100%;
     height: 85px;
-    z-index: 3;
+    z-index: 5;
     background-color: #fff;
     border: 3px;
     border-color: rgba(0, 0, 0, 0.3);
@@ -55,6 +55,10 @@
     list-style: none;
 }
 
+.menu__telephone_mobile{
+    display: none;
+}
+
 .menu__link {
     color: black;
     text-decoration: none;
@@ -83,35 +87,69 @@
 .phone__link:hover {
     color: #001a54;
 }
+.burger__body{
+    display: none;
+}
 
 @media (max-width: 768px) {
-    .header{
-        /* position: relative; */
-        /* background-color: yellow; */
-        height: 70px;
+    .header{ 
+        height: 65px;
+        z-index: 6;
+        font-family: "Open Sans", sans-serif;
+
     }
+    .header._active{
+        /* border: 2px ;
+        border-color: #001a54;
+        border-bottom-style: solid;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        transition: all 0.4s ease 0s; */
+        /* border: 0;
+        border-radius: 0;
+        transition: all 0.4s ease 0s; */
+    }
+
+    /* .header::before{
+        position:absolute;
+        top:0;
+        left:0;
+        width: 100px;
+        border-bottom: 2px;
+        border-color: #001a54;
+        border-bottom-style: solid;
+    } */
     .header__body {
-        display:none;
-        /* background-color: green; */
-       
+        display: block;
+        position: relative;
+        z-index: 6;
     }
     .header__column_logo {
-        width: 150px;
-        margin-left: 30px;
-        margin-top: 15px;
-        /* display: none; */
+        z-index: 7;
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        top: 0;
+        left: 0;
+        top: 10%;
+        left: 7.5%;
+        width: 140px;
+    }
+    .header__column_burger{
+        position: absolute;
+        top: 30%;
+        right: 7.5%;
     }
     .header__burger {
         position: absolute;
-        top: 0;
-        right: 0;
-        z-index: 5;
+        top: 0%;
+        right: 0%;
+        z-index: 7;
         display: block;
-        width: 30px;
-        height: 18px;
+        width: 35px;
+        height: 20px;
         cursor: pointer;
         position: relative;
-        /* background-color: red; */
     }
     .header__burger span,
     .header__burger::before,
@@ -138,21 +176,101 @@
         transform: scale(1) translate(0px, -50%);
     }
 
+   .header__burger._active span{
+    transform: scale(0) translate(0px, -50%);
+   }
+   .header__burger._active::before{
+    top:50%;
+    transform: rotate(-45deg) translate(0px,-50%);
+   }
+   .header__burger._active::after{
+    bottom:50%;
+    transform: rotate(45deg) translate(0px,50%);
+   }
+
     .nav__menu {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: grey;
         display: none;
     }
-    .menu__link {
-        color: black;
+
+    .menu__list{
+        display: block;
+        background-color: grey;
     }
+    
 
     .header__contact {
         display: none;
+    }
+
+    .burger__body{
+        display: block;
+        position: fixed;
+        z-index: 100;
+        top: -100%;
+        right: 0%;
+        width: 100%;
+        height: 240px;
+        z-index:5;
+        background: white; 
+        font-family: "Open Sans", sans-serif;
+        border: 3px;
+        border-color: rgba(0, 0, 0, 0.3);
+        border-bottom-style: solid;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        transition: top 0.4s ease 0s;       
+    }
+    .burger__body::before{
+        content: "";
+        
+        
+
+    }
+    
+
+    .burger__body._active{
+        top: 60px;
+        /* top: 65px; */
+    }
+    .burger__body._active::before{
+        /* position: fixed;
+        top: 65px;
+        left: 7.5%;
+        width: 85%;
+        border: 2px;
+        border-top-style:solid;
+        border-color: #001a54;
+        transition: all 0.4s ease 0s; */
+    }
+
+
+    .burger__info{
+        margin-top: 35px;
+        width: 100%;
+        height: 60%;      
+    }
+    .info__list{
+        text-align: center;
+    }
+    .info__item{
+        margin-top:22px;
+    }
+    .menu__link{
+        font-size: 22px;
+        background-color: white;
+        color: #001a54;
+        border: 2px;
+        border-color: #001a54;
+        border-style: solid;
+        border-radius: 25px;
+        padding: 7px;
+    }
+    .phone__link{
+        color: #001a54;
+        font-size: 22px;
+    }
+    .menu__telephone_mobile{
+        display: block;
     }
 }
 

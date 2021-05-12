@@ -182,31 +182,36 @@
 @media(max-width: 768px){
 
     .slider__text_1 {
+        left: 5%;
+        width: 90%;
         font-size: 35px;
     }
     .slider__text_2 {
-        left: 10%;
+        left: 5%;
+        width: 90%;
         font-size: 35px;
     }
     .slider__text_3 {
+        left: 5%;
+        width: 90%;
         font-size: 35px;
     }
     .slider__button_1 {
         top: 30%;
-        left: 10%;
+        left: 5%;
         width: 140px;
         height: 40px;
     }
 
     .slider__button_2 {
         top: 30%;
-        left: 10%;
+        left: 5%;
         width: 140px;
         height: 40px;
     }
     .slider__button_3 {
         top: 30%;
-        left: 10%;
+        left: 5%;
         width: 140px;
         height: 40px;
     }

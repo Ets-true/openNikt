@@ -88,3 +88,28 @@
     box-shadow: none;
 
 }
+
+@media(max-width: 768px) {
+    .contacts__chat {
+       /* background-color: blue; */
+    }
+    .chat__content {
+        width: 100%;
+    }
+    .chat__title {
+        top: 0;
+    }
+    .chat__form {
+        top: 10%;
+    }
+    .input {
+        width: 100%;
+    }
+    .message__input {
+        width: 100%;
+    }
+    .button__input {
+        width: 50%;
+        margin-top: 20px;
+    }
+}

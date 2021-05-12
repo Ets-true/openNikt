@@ -5,6 +5,8 @@ body {
 }
 .home {
     font-family: "Open Sans", sans-serif;
+    /* background-color: grey;
+    z-index: 1000; */
 }
 .attantion_mobile{
     display: none;

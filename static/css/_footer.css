@@ -9,7 +9,7 @@
 }
 
 .footer__content{
-    position: absolute;
+    /* position: absolute; */
     margin-left: 7.5%;
     margin-right: 7.5%;
     width: 85%;
@@ -38,8 +38,8 @@
     left: 8%
 }
 @media(max-width: 768px){
-    .footer{
-        /* display: none; */
+    .footer__logo{
+       left: -5%;
     }
 }
 

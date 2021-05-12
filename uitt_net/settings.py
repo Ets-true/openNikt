@@ -166,13 +166,17 @@ SUMMERNOTE_CONFIG = {
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
+STATIC_ROOT = ''
 STATIC_URL = '/static/'
 # STATIC_ROOT = 'static/'
 
-if DEBUG:
-    STATICFILES_DIRS = [
-        os.path.join(BASE_DIR, "/home/kirill/Niktel_landing/uitt.net/static/"),
-    ]
+STATICFILES_DIRS = (os.path.join("/home/kirill/Niktel_landing/uitt.net/static/"), )
+
+
+# if DEBUG:
+#     STATICFILES_DIRS = [
+#         os.path.join(BASE_DIR, "/home/kirill/Niktel_landing/uitt.net/static/"),
+#     ]
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
