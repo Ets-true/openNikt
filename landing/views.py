@@ -4,6 +4,9 @@ from models import Contact, Options, About, Partners, Features, Phone
 from django.middleware.csrf import get_token
 import requests
 from django.utils.translation import ugettext as _
+import sys
+reload(sys)
+sys.setdefaultencoding('utf-8')
 
 # Create your views here.
 def send_message(request):
@@ -14,16 +17,18 @@ def send_message(request):
             phone = request.POST['phone']
             message = request.POST['text']
 
-            # bot_token = '768364819:AAHyomyBg_2vf7ll1de2FtNHSJrZdcuvL0E'
-            # bot_chatID = '1001403044490'
-            send_text = 'https://api.telegram.org/bot' + bot_token + '/sendMessage?chat_id=-' + bot_chatID + \
+            #bot_token = '768364819:AAHyomyBg_2vf7ll1de2FtNHSJrZdcuvL0E'
+            bot_token = '1872010706:AAG1GrVYhIV6iYUe5BTl1AIgV6QS4738NVw'
+            #bot_chatID = '1001403044490'
+            bot_chatID = '-528140504'
+            send_text = 'https://api.telegram.org/bot' + bot_token + '/sendMessage?chat_id=' + bot_chatID + \
                         '&parse_mode=Markdown&text=' + u'Имя: ' + name + "\n" + u'Номер телефона: ' + phone + '\n' + \
                         'e-mail: ' + e_mail + "\n" + u'Текст сообщения: ' + message
             """https://api.telegram.org/bot768364819:AAHyomyBg_2vf7ll1de2FtNHSJrZdcuvL0E/sendMessage?chat_id=349390064&parse_mode=Markdown&text=TEST"""
 
             response = requests.get(send_text)
 
-            return HttpResponse(_("Спасибо! Ваше сообщение отправлено."))
+            return HttpResponse(_("Ваше сообщение отправлено"))
         except BaseException:
             return HttpResponse(_("Что-то пошло не так :-("))
 

@@ -3,6 +3,7 @@
 
 {% block head %}
 <meta name="csrf-token" content="{{ token }}">
+
 {% endblock %}
 
 {% block title %}{{ title }}{% endblock %}
@@ -25,6 +26,7 @@
 
 
 <div class="contacts">
+  
 
   <div class="contacts__map map">
     <div class="map__content">
@@ -69,10 +71,8 @@
       </div>
 
       <div class="chat__form form">
-        <form class="form__content" action="" method="post">
+        <form class="form__content" action="send_message" method="post">
           {% csrf_token %}
-
-          <!-- <i class="material-icons">tag_faces</i> -->
 
 
           <div class="form__name name">
@@ -98,10 +98,11 @@
           </div>
 
           <div class="form__button button">
-            <button class="button__input" type="button">{% trans 'Отправить' %}</button>
+            <button class="button__input" type="submit">{% trans 'Отправить' %}</button>
           </div>
 
         </form>
+        
       </div>
     </div>
 
