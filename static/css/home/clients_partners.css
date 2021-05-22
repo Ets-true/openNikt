@@ -1,16 +1,16 @@
 .home__clients_partners {
     margin-top: 100px;
     width: 100%;
+    min-height: 750px;
     height: 100vh;
-    /* background-color: blue; */
+    max-height: 1080px;
 }
 
 .clients_partners__content {
     margin: auto;
     height: 100%;
     width: 85%;
-    max-width: 1800px;
-    /* background-color: green; */
+    max-width: 1300px;
     position: relative;
 }
 
@@ -28,8 +28,6 @@
     left: 2.5%;
     width: 45%;
     height: 80%;
-    /* background-color:yellow; */
-
 }
 .clients__title{
     text-align: center;
@@ -41,7 +39,6 @@
     left:0;
     width: 50%;
     height: 93%;
-    /* background-color: orange; */
 }
 .clients__column_right{
     position: absolute;
@@ -49,26 +46,22 @@
     right:0;
     width: 50%;
     height: 93%;
-    /* background-color: orange; */
 }
 
 .clinets_partners__example {
     margin:auto;
     margin-top: 50px;
-    width: 300px;
-    height: 120px;
+    width: 250px;
+    height: 100px;
     background-color: #fff;
     border-radius: 15px;
     border: 8px;
     border-color: white;
-    /* border-color: #001a54; */
     border-style: solid;
     background-image: url(/static/media/_navbar/niktel_logo_ru.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    /* background-position: 50% 50%; */
-    /* box-shadow: 0 0 0 6px #fff, 0 0 0 12px #888; */
     box-shadow: 0 0 4px #001a54, 0 0 10px rgba(0,0,0,0.5);
 
 }
@@ -89,10 +82,8 @@
     right: 2.5%;
     width: 45%;
     height: 80%;
-    /* background-color:yellow; */
-    /* position: relative; */
-
 }
+
 .cont{
     width: 100%;
     height: 100%;
@@ -101,7 +92,6 @@
 .partners__title{
     text-align: center;
     font-size: 30px;
-    /* display: none; */
 }
 .partners__column_left{
     position: absolute;
@@ -109,8 +99,6 @@
     left:0;
     width: 50%;
     height: 93%;
-    /* background-color: orange; */
-    /* display: none; */
 }
 .partners__column_right{
     position: absolute;
@@ -118,8 +106,6 @@
     right:0;
     width: 50%;
     height: 93%;
-    /* background-color: orange; */
-    /* display: none; */
 }
 
 .clients__Tenex{
@@ -164,25 +150,6 @@
 .partners__Comptek{
     background-image: url(/static/media/home/partners/Comptek.jpg);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -279,10 +246,6 @@
     font-size: 20px;
     color: white;
 } */
-
-
-
-
 /* @media(max-width:768px){
     .slideshow_2__title {
         left: 10%;
@@ -293,26 +256,26 @@
         width: 100%;
         height: 30%;
     }
-} */
+}
 
 
-/* @media(min-width: 769px) and (max-width: 1022px) {
+@media(min-width: 769px) and (max-width: 1022px) {
     .slideshow_2__title {
         top: 7.5%;
         left: 35%;
         font-size: 14px;
     }
-} */
+}
 
-/* @media(min-width: 1023px) and (max-width: 1439px) {
+@media(min-width: 1023px) and (max-width: 1439px) {
     .slideshow_2__title {
         top: 7.5%;
         left: 35%;
         font-size: 16px;
     }
-} */
+}
 
-/* @media(min-width: 1919px) {
+@media(min-width: 1919px) {
     .slideshow_2__title {
         top: 7.5%;
         left: 35%;
@@ -320,9 +283,10 @@
     }
 } */
 
-
-@media(max-width: 768px) {
-
+@media (max-width: 319px) {
+    .clients_partners__content {
+        max-width: 300px;
+    }
     .clients_partners__line_vertical{
         display: none;
     }
@@ -335,8 +299,112 @@
         left: 0;
         width: 100%;
         height: 50%;
-        /* background-color:yellow; */
-    
+    }
+    .clients__title{
+        font-size: 18px;
+        height: 100px;
+    }
+    .clients__column_left{
+        top: 11%;
+        height: 89%;
+    }
+    .clients__column_right{
+        top: 11%;
+        height: 89%;
+    }
+    .partners__content {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 100%;
+        height: 50%;
+    }
+    .partners__title{
+        font-size: 18px;
+    }
+    .partners__column_left{
+        top: 11%;
+        height: 89%;
+    }
+    .partners__column_right{
+        top: 11%;
+        height: 89%;
+    }
+    .clinets_partners__example {
+        margin:auto;
+        margin-top: 20px;
+        width: 100px;
+        height: 40px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 375px){
+    .clients_partners__content {
+        max-width: 300px;
+    }
+    .clients_partners__line_vertical{
+        display: none;
+    }
+    .home__clients_partners {
+        height: 100vh;
+    }
+    .clients__content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+    }
+    .clients__title{
+        font-size: 22px;
+        height: 100px;
+    }
+    .clients__column_left{
+        top: 11%;
+        height: 89%;
+    }
+    .clients__column_right{
+        top: 11%;
+        height: 89%;
+    }
+    .partners__content {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 100%;
+        height: 50%;
+    }
+    .partners__title{
+        font-size: 22px;
+    }
+    .partners__column_left{
+        top: 11%;
+        height: 89%;
+    }
+    .partners__column_right{
+        top: 11%;
+        height: 89%;
+    }
+    .clinets_partners__example {
+        margin:auto;
+        margin-top: 20px;
+        width: 130px;
+        height: 52px;
+    }
+}   
+@media (min-width: 376px) and (max-width: 425px){
+    .clients_partners__line_vertical{
+        display: none;
+    }
+    .home__clients_partners {
+        height: 100vh;
+    }
+    .clients__content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
     }
     .clients__title{
         font-size: 26px;
@@ -350,20 +418,14 @@
         top: 11%;
         height: 89%;
     }
-    
-
     .partners__content {
         position: absolute;
         top: 50%;
         right: 0;
         width: 100%;
         height: 50%;
-        /* background-color:orange; */
-        /* position: relative; */
-    
     }
     .partners__title{
-        
         font-size: 26px;
     }
     .partners__column_left{
@@ -374,26 +436,122 @@
         top: 11%;
         height: 89%;
     }
-
     .clinets_partners__example {
         margin:auto;
         margin-top: 20px;
         width: 150px;
         height: 60px;
-    
     }
+}
+
+@media (min-width: 426px) and (max-width: 768px) {
+    .clients_partners__content {
+        max-width: 400px;
+    }
+    .clients_partners__line_vertical{
+        display: none;
+    }
+    .home__clients_partners {
+        height: 100vh;
+    }
+    .clients__content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+    }
+    .clients__title{
+        font-size: 26px;
+        height: 100px;
+    }
+    .clients__column_left{
+        top: 11%;
+        height: 89%;
+    }
+    .clients__column_right{
+        top: 11%;
+        height: 89%;
+    }
+    .partners__content {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 100%;
+        height: 50%;
+    }
+    .partners__title{
+        font-size: 26px;
+    }
+    .partners__column_left{
+        top: 11%;
+        height: 89%;
+    }
+    .partners__column_right{
+        top: 11%;
+        height: 89%;
+    }
+    .clinets_partners__example {
+        margin:auto;
+        margin-top: 20px;
+        width: 175px;
+        height: 70px;
+    }
+    
 
 
 
 
 
 }
+
+
+/* Десктоп адаптив */
 
 @media(min-width: 769px) and (max-width: 1022px) {
-
+    .clients__title {
+        font-size: 18px;
+        /* display: none; */
+    }
+    .partners__title {
+        font-size: 18px;
+    }
+    .clinets_partners__example {
+        margin-top: 25px;
+        width: 140px;
+        height: 56px;
+    }
+    .clients_partners__content {
+        max-width: 700px;
+    }
+    .clients_partners__line_vertical{
+        border-left: 2px solid #001a54;
+        height: 300px;
+        
+    }
+    
 }
-@media(min-width: 1023px) and (max-width: 1439px) {
 
+@media(min-width: 1023px) and (max-width: 1439px) {
+    .clients__title {
+        font-size: 22px;
+    }
+    .partners__title {
+        font-size: 22px;
+    }
+    .clinets_partners__example {
+        margin-top: 40px;
+        width: 180px;
+        height: 72px;
+    }
+    .clients_partners__content {
+        max-width: 1000px;
+    }
+    .clients_partners__line_vertical{
+        border-left: 3px solid #001a54;
+        height: 400px;
+        
+    }
 }
 
 @media(min-width: 1919px) {
@@ -402,5 +560,13 @@
     }
     .partners__title{
         font-size: 32px;
+    }
+    .clinets_partners__example {
+        margin-top: 50px;
+        width: 300px;
+        height: 120px;
+    }
+    .clients_partners__content {
+        max-width: 1700px;
     }
 }

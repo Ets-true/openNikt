@@ -180,6 +180,9 @@
 }
 
 @media(max-width: 768px){
+    .home__slideshow {
+        /* display:none; */
+    }
 
     .slider__text_1 {
         left: 5%;

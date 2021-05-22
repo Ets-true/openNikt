@@ -36,6 +36,12 @@
     color: #001a54;
 }
 
+@media(max-width: 768px){
+    .home__scrollUp{
+        display: none;
+    }
+}
+
 @media(min-width: 769px) and (max-width: 1022px) {
     .home__scrollUp {
         right: 10px;
