@@ -1,16 +1,17 @@
 .contacts__map {
-    margin-right: 7.5%;
-    margin-left: 7.5%;
-    width: 85%;
-    height: 100vh;
+    width: 100%;
+    min-height: 750px;
+    height: 85vh;
+    max-height: 1080px
 }
 
 .map__content{
     margin:auto;
-    width: 100%;
-    max-width: 1500px;
+    width: 85%;
+    max-width: 1800px;
     height: 100%;
     position: relative;
+    /* background-color: grey; */
 }
 
 .map__column_left{
@@ -54,31 +55,28 @@
 
 @media(max-width: 768px) {
     .contacts__map {
-        height: 120vh;
+        height: auto;
     }
 
     .map__column_left{
-        position: absolute;
-        top: 0;
-        left: 0;
+        position: static;
+        /* padding-top: 100px; */
         width: 100%;
-        height: 40%;   
+        height: auto;
     }
     .map__info{
-        margin-top: 25%;
+        margin-top: 75px;
         font-size: 20px;
     }
     .map__column_right{
-        position: absolute;
-        top: 45%;
-        left: 0;
+        position: static;
         width: 100%;
-        height: 50%;    
+        height: auto; 
     }
     .map__yandexMap {
-        margin-top: 10%;
+        margin-top: 25px;
         width: 100%;
-        height: 80%;
+        height: 350px;
     }
 }
 

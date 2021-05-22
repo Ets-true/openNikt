@@ -70,7 +70,8 @@
 
 @media(max-width: 768px){
     .develop{
-        height: 1080px;
+        max-height: none;
+        height: auto;
     }
     .develop__content {
         display: block;

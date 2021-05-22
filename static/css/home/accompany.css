@@ -74,7 +74,8 @@
 
 @media(max-width: 768px){
     .accompany{
-        height: 1080px;
+        max-height: none;
+        height: auto;
     }
     .accompany__content {
         display: block;

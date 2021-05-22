@@ -76,7 +76,8 @@
 
 @media(max-width: 768px){
     .security{
-        height: 1080px;
+        max-height: none;
+        height: auto;
     }
     .security__content {
         display: block;

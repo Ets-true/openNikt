@@ -1,0 +1,170 @@
+.company__history {
+    min-height: 750px;
+    height: 100vh;
+    max-height: 1080px
+}
+
+.history__content {
+    margin:auto;
+    width: 85%;
+    max-width: 1800px;
+    height: 100%;
+    position: relative;
+    /* background-color: grey; */
+}
+
+.history__title {
+    position: absolute;
+    width: 100%;
+    top: 15%;
+    left: 2.5%;
+    font-size: 26px;
+}
+.history__diagram {
+    position: absolute;
+    width: 95%;
+    height: 50%;
+    top: 30%;
+    left: 2.5%;
+    padding: 20px;
+    position: relative;
+}
+.diagram__elements{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.diagram__element{
+    margin-top: 40px;
+    width: 190px;
+    height: 180px;
+    border: 4px;
+    border-style: solid;
+    border-color: #001a54;
+    border-radius: 50%;
+    text-align:center;
+    z-index: 10;
+    background-color: #fff;
+    padding-top: 60px;
+    font-size: 30px;
+    box-shadow: 0 0 4px rgba(0,0,0,0.5);
+}
+
+.today{
+    padding-top: 45px;
+    font-size: 26px;
+}
+.diagram__line{
+    position: absolute;
+    z-index: -10;
+    top: 25%;
+    left: 0%;
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-bottom: 4px solid #001a54;
+    width: 95%;
+    
+}
+
+.diagram__info{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.text{
+    width: 200px;
+    font-size: 18px;
+    /* background-color: grey; */
+    text-align: center;
+}
+._element{
+    margin-top: 250px;
+}
+._line{
+    margin-top: 50px;
+}
+
+@media(max-width: 768px){
+    .company__history {
+        display: block;
+        margin-top: 100px;
+        max-height: none;
+        height: auto;
+    }
+    .history__content {
+        /* background-color: green; */
+    }
+    .history__title {
+        position: static;
+        margin-top: 0;
+        text-align:center;
+        margin-bottom: 50px;
+    }
+    .history__diagram {
+        position: static;
+        width: 100%;
+        height: auto;
+        padding: 0;
+    }
+    .diagram__elements{
+        width: 100%;
+        height: 100%;
+        display: block;
+
+    }
+    .diagram__element{
+        margin-left: 20px;
+        margin-bottom: 100px;
+        width: 150px;
+        height: 140px;
+        padding-top: 45px;
+    }
+    .today{
+        padding-top: 30px;
+
+    }
+    .diagram__line{
+        top: 60px;
+        left: 75px;
+        border-bottom: 0;
+        border-left: 4px solid #001a54;
+        width: auto;
+        height: 500px;
+    }
+    .diagram__info{
+        display: block;
+        padding: 0;
+        width: auto;
+        height: 100%;
+        left: 150px;
+        padding-top: 60px;
+        /* background-color: yellow; */
+        
+    }
+    .text{
+        width: auto;
+        height:auto;
+        margin: 0;
+        margin:auto;
+        margin-top: 50px;
+        margin-left: 30px;
+        /* margin-top: 150px; */
+        /* background-color: grey; */
+    }
+    ._element{
+        
+        
+    }
+    ._line{
+        margin-top: 50px;
+        margin-left: 10px;
+    }
+}
