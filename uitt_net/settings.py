@@ -170,7 +170,8 @@ STATIC_ROOT = ''
 STATIC_URL = '/static/'
 # STATIC_ROOT = 'static/'
 
-STATICFILES_DIRS = (os.path.join("/home/kirill/Niktel_landing/uitt.net/static/"), )
+STATICFILES_DIRS = (os.path.join("/home/kirill/Niktel_landing/uitt.net/static/"), 
+os.path.join("/home/www/Niktel/static/"),)
 
 
 # if DEBUG:
