@@ -89,7 +89,7 @@
     margin-top: 250px;
 }
 ._line{
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 @media(max-width: 768px){
@@ -124,7 +124,7 @@
         margin-left: 20px;
         margin-bottom: 100px;
         width: 150px;
-        height: 140px;
+        height: 150px;
         padding-top: 45px;
     }
     .today{
@@ -167,4 +167,14 @@
         margin-top: 50px;
         margin-left: 10px;
     }
+}
+
+@media(min-width: 1919px) {
+    .history__title {
+        font-size: 32px;
+    }
+    .text{
+        font-size: 22px;
+    }
+
 }

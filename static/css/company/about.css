@@ -195,3 +195,21 @@
         display: block;
     }
 }
+
+
+@media(min-width: 1919px) {
+    .about__title {
+        font-size: 32px;
+    }
+    .about__info {
+        font-size: 28px;
+        line-height: 50px;
+    }
+    .tezis__title {
+        font-size: 60px;
+    }
+    .tezis__info {
+        font-size: 35px;
+    }
+
+}
