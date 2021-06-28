@@ -19,15 +19,12 @@
 .accompany__column_left {
     position: absolute;
     top: 0;
-    /* left: 0; */
     right: 60%;
     width: 40%;
     height: 100%;
     position: relative;
-    /* background-color: grey; */
 }
 .accompany__image {
-    /* display: none; */
     margin:auto;
     margin-top: 135px;
     width: 90%;
@@ -45,18 +42,15 @@
     width: 60%;
     height: 100%;
     position: relative;
-    /* background-color: yellow; */
 }
 
 .accompany__title {
-    /* display: none; */
     margin-top: 210px;
     width: 100%;
     text-align:center;
     font-size: 28px;
 }
 .accompany__info {
-    /* display: none; */
     margin: auto;
     margin-top: 20px;
     width: 90%;
@@ -66,7 +60,6 @@
     background-color: #fff;
 }
 ._tezis {
-    /* display: none; */
     text-align: left;
     margin-top: 0px;
 }

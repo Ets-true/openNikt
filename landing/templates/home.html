@@ -9,37 +9,22 @@
 <div class="home">
 
     <div class="home__slideshow slideshow">
-
         <div class="slideshow__prev">
             <i class="slideshow fas fa-chevron-left "></i>
         </div>
         <div class="slideshow__next">
             <i class="slideshow fas fa-chevron-right "></i>
         </div>
-
         <div class="slideshow__slider slider">
-
-
-
             <div class="slider__example_1">
-                <!-- <img class="slider__image" src="static/media/home/slides/Develop.jpg" /> -->
                 <img class="slider__image" />
                 <h2 class="slider__text_1">
                     Cоздание IT-инфраструктуры
-                    <!-- <span>Создание
-                    <span class="spacer"></span>
-                    <br />
-                    <span class="spacer"></span>
-                    IT-инфраструктуры
-                </span> -->
                 </h2>
                 <div class="slider__button_1" href="#develop">
                     <a class="slider__link" href="#develop"> Подробнее</a>
-
                 </div>
-
             </div>
-
             <div class="slider__example_2">
                 <img class="slider__image" />
                 <h2 class="slider__text_2">
@@ -48,9 +33,7 @@
                 <div class="slider__button_2">
                     <a class="slider__link" href="#accompany"> Подробнее</a>
                 </div>
-
             </div>
-
             <div class="slider__example_3">
                 <img class="slider__image" />
                 <h2 class="slider__text_3">
@@ -59,124 +42,15 @@
                 <div class="slider__button_3">
                     <a class="slider__link" href="#security"> Подробнее</a>
                 </div>
-
             </div>
         </div>
 
 
 
-
-
-
-
-
-
-
-        <!-- Опции -->
-        <!-- <main class="container marketing">
-
-        
-        {% for option in options %}
-        {% if forloop.counter0 == 0 or forloop.counter0|divisibleby:4 %}
-        <div class="row">
-            {% endif %}
-            <a href="/option/{{ option.slug }}" class="col-lg-3">
-                {#        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>#}
-                <div class="center-cropped">
-                    {% load thumbnail %}
-                    {% thumbnail option.image "x140" crop="center" format="PNG" as im %}
-                    <img src="{{ im.url }}" width="140" height="140"
-                        class="rounded-circle border border-primary centered-and-cropped">
-                    {% endthumbnail %}
-                </div>
-                <h5 class="logo-color">{{ option.header_text }}</h5>
-            </a>
-            
-
-            {% endfor %}
-        </div>
-        <hr class="featurette-divider">
-    </main> -->
-
-        <!-- Клиенты и партнеры -->
-        <!-- <div class="partners navbar-light bg-light navbar-expand-md d-md-flex">
-        <main class="container">
-            <div class="row featurette ml-auto">
-                <h2 class="featurette-heading" style="margin-top: 10px; width: 100%;">
-                    {% trans 'Наши клиенты и партнеры' %}</h2>
-                <div class="col-md-6">
-                    {% for partner in partners %}
-                    {% if not partner.is_vendor %}
-                    {% load thumbnail %}
-                    {% thumbnail partner.image "x40" crop="center" format="PNG" as im %}
-                    {% if partner.link %}
-                    <a href="http://{{ partner.link }}" target="_blank"><img class="img-thumbnail"
-                            src="{{ im.url }}"></a>
-                    {% else %}
-                    <img class="img-thumbnail" src="{{ im.url }}">
-                    {% endif %}
-                    {% empty %}
-                    {% endthumbnail %}
-                    {% endif %}
-                    {% endfor %}
-                </div>
-                <div class="col-md-6">
-                    {% for partner in partners %}
-                    {% if partner.is_vendor %}
-                    {% load thumbnail %}
-                    {% thumbnail partner.image "x40" crop="bottom" format="PNG" as im %}
-                    {% if partner.link %}
-                    <a href="http://{{ partner.link }}" target="_blank"><img class="img-thumbnail"
-                            src="{{ im.url }}"></a>
-                    {% else %}
-                    <img class="img-thumbnail" src="{{ im.url }}">
-                    {% endif %}
-                    {% empty %}
-                    {% endthumbnail %}
-                    {% endif %}
-                    {% endfor %}
-                </div>
-            </div>
-        </main>
-    </div> -->
-
-        <!-- Преимущества -->
-        <!-- <main class="container">
-        {% for f in features %}
-        <hr class="featurette-divider">
-        <div class="row featurette">
-            <div class="col-md-7 {% if forloop.counter|divisibleby:2 %}order-md-2{% endif %}">
-                <h2 class="featurette-heading">{{ f.header_text }}</h2><br>
-                <h4><a href="/feature/{{ f.slug }}" class="text-muted">{{ f.subheader_text }}</a></h4>
-                {#                    <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>#}
-            </div>
-            <a href="/feature/{{ f.slug }}"
-                class="col-md-5 {% if forloop.counter|divisibleby:2 %}order-md-1{% endif %}">
-                {% load thumbnail %}
-                {% thumbnail f.image "500x500" crop="center" as im %}
-                <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto"
-                    src="{{ im.url }}">
-                {% empty %}
-                {% endthumbnail %}
-                {#            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 500x500"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>#}
-            </a>
-        </div>
-        {% endfor %}
-        <hr class="featurette-divider">
-        {#        
-
-        </div>
-    </main> -->
-
-        <!-- </main> -->
     </div>
 
     <div class="home__develop develop" id="develop">
-
-
         <div class="develop__content">
-            <!-- Блок про Создание -->
-
             <div class="develop__column_left">
                 <div class="develop__text">
                     <h2 class="develop__title">Создание IT-инфраструктуры</h2>
@@ -192,23 +66,15 @@
                     </p>
                 </div>
             </div>
-
             <div class="develop__column_right">
                 <div class="develop__image">
-                    <!-- <img src="static/media/home/slides/test_2.jpg" alt=""> -->
                 </div>
             </div>
-
-
         </div>
     </div>
 
     <div class="home__accompany accompany" id="accompany">
-
-        <!-- Блок про Сопровождение -->
         <div class="accompany__content">
-
-            
             <div class="accompany__column_right">
                 <div class="accompany__text">
                     <h2 class="accompany__title">Сопровождение IT-инфраструктуры</h2>
@@ -223,23 +89,17 @@
                     </p>
                 </div>
             </div>
-
             <div class="accompany__column_left">
                 <div class="accompany__image">
                     <img src="" alt="">
                 </div>
             </div>
-
-
-
         </div>
     </div>
 
     <div class="home__security security" id="security">
         <div class="security__content">
-
             <div class="security__column_top">
-                <!-- <div class="security__text"> -->
                     <h2 class="security__title">Безопасность IT-инфраструктуры</h2>
                     <p class="security__info"> Компания «Никтел» считает главной целью обеспечение безопасности как
                         информации заказчика, так и всего его оборудования. Для этого применяется следующее:<br>
@@ -256,59 +116,16 @@
                             – Системы обнаружения и предотвращения вторжений<br>
                         </p>
                     </div>
-                    
-                
             </div>
-
             <div class="security__column_bottom">
                 <div class="security__image">
                     <img src="" alt="">
                 </div>
             </div>
-
-
-
-
         </div>
     </div>
 
     <div class="home__clients_partners clients_partners">
-        <!-- <div class="clients_partners__slideshow_2 slideshow_2">
-            <div class="slideshow_2__title">
-                <h2>Наши клиенты и партнеры</h2>
-            </div>
-            <div class="slideshow_2__prev">
-                <i class="slideshow_2 fas fa-chevron-left "></i>
-            </div>
-            <div class="slideshow_2__next">
-                <i class="slideshow_2 fas fa-chevron-right"></i>
-            </div>
-
-            <div class="slideshow_2__slider_2 slider_2">
-                <div class="slider_2__example_1">
-                   
-                    <img  class="slider_2__image" src="static/media/home/partners/citrix.jpg" alt="">
-                    <img  class="slider_2__image" src="static/media/home/partners/gpbra_logo.png" alt="">
-                    <img  class="slider_2__image" src="static/media/home/partners/logo_new.png" alt="">
-                    <img  class="slider_2__image" src="static/media/home/partners/MikroTik-Logo.png" alt="">
-
-                </div>
-                <div class="slider_2__example_2">
-                    <img  class="slider_2__image" src="static/media/home/partners/Dell.png" alt="">
-                    <img  class="slider_2__image" src="static/media/home/partners/Tenex.png" alt="">
-                    <img  class="slider_2__image" src="static/media/home/partners/tgc.png" alt="">
-                    <img  class="slider_2__image" src="static/media/home/partners/cp.jpg" alt="">
-                </div>
-                <div class="slider_2__example_3">
-                    <img  class="slider_2__image" src="static/media/home/partners/Cisco.png" alt="">
-                    <img  class="slider_2__image" src="static/media/home/partners/Comptek.png" alt="">
-                    <img  class="slider_2__image" src="static/media/home/partners/RosEnergoAtom.png" alt="">
-                    <img  class="slider_2__image" src="static/media/home/partners/VMware_logo.svg.png" alt="">
-                    
-                </div>
-            </div>
-
-        </div> -->
         <div class="clients_partners__content">
             <div class="clients_partners__line_vertical"> </div>
             <div class="clients__content">
@@ -376,9 +193,7 @@
 
 
 </div>
-<div class="attantion_mobile">
-    Мобильная версия сайта находится в разработке
-</div>
+
 
 
 

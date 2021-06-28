@@ -3,55 +3,29 @@
 
 {% block head %}
 <meta name="csrf-token" content="{{ token }}">
-
 {% endblock %}
-
 {% block title %}{{ title }}{% endblock %}
-
-
 {% block content %}
 {% load static %}
 
-<!-- <div class="contacts">
-  <div class="contacts__notification">
-    Страница "Контакты" на данный момент находится в разработке
-  </div>
-</div> -->
-
-
-
-
-
-
-
-
 <div class="contacts">
-  
-
   <div class="contacts__map map">
     <div class="map__content">
-
       <div class="map__column_left">
         <div class="map__info">
           <p>Адрес: <br>
             РФ, 121087 г. Москва,<br>
-           
             ул. Барклая, д. 6, стр. 5,<br>
-           
             этаж 5, комната 22л.<br>
-           
             Телефон: +7 (499) 281-55-35<br>
             Электронная почта: na@niktel.ru<br>
-            
             ИНН: 7730194369<br>
             КПП: 773001001<br>
             <br>
           </p>
           <a class="map__download" href="{% static 'files/Niktel.docx'%}" download> Скачать карточку контрагента </a>
-          
         </div>
       </div>
-
       <div class="map__column_right">
         <div class="map__yandexMap">
           <script type="text/javascript" charset="utf-8" async
@@ -62,7 +36,6 @@
     </div>
   </div>
 
- 
   <div class="contacts__chat">
     <div class="chat__content">
 
@@ -73,55 +46,33 @@
       <div class="chat__form form">
         <form class="form__content" action="send_message" method="post">
           {% csrf_token %}
-
-
           <div class="form__name name">
             <input class="name__input input" id="name__input_id" name="name" type="text"
               placeholder="{% trans 'Ваше имя' %}">
           </div>
-
           <div class="form__phone phone">
             <input class="phone__input input" id="phone__input_id" name="phone" type="text"
               placeholder="{% trans 'Ваш номер телефона' %}">
           </div>
-
           <div class="form__email email">
             <input class="email__input input" id="email__input_id" name="email" type="email"
               placeholder="{% trans 'Ваш e-mail' %}">
           </div>
-
-
-
           <div class="form__message message">
             <textarea class="message__input" id="message__input_id" name="text"
               placeholder="{% trans 'Текст сообщения' %}"></textarea>
           </div>
-
           <div class="form__button button">
             <button class="button__input" type="submit">{% trans 'Отправить' %}</button>
           </div>
-
         </form>
-        
       </div>
     </div>
-
   </div>
-
-  
-
-
-</div>
-<div class="attantion_mobile">
-  Мобильная версия сайта находится в разработке
 </div>
 
 
 
-
-
-
-<!-- <script src="https://www.google.com/recaptcha/api.js?render=6LeLPqAUAAAAACA1yUnkWfmIQaNHlu6kPINcYk2l"></script> -->
-
+<script src="https://www.google.com/recaptcha/api.js?render=6LeLPqAUAAAAACA1yUnkWfmIQaNHlu6kPINcYk2l"></script>
 {% endblock %}
 

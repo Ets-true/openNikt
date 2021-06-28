@@ -2,18 +2,14 @@
 {% load static %}
 
 <!doctype html>
-
-<!-- Устанавливаем язык страниц -->
 {% get_current_language as LANGUAGE_CODE %}
 <html lang="{{ LANGUAGE_CODE }}">
 
 <head>
-  <!-- Коодировка UTF-8 -->
+  
   <meta charset="utf-8">
-  <!-- Адаптивный мета тег-->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!-- SEO мета тег-->
-  <meta name="description" content="">
+  <meta name="description" content="Никтел - IT-компания">
 
   {% block head %}
 
@@ -24,21 +20,14 @@
   
 
  
-  <!-- Подключение иконок -->
+ 
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!-- favicon -->
   <link rel="shortcut icon" type="image/png" href="{% static 'media/favicon.ico'%}">
-
   <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 
-  
-  <!-- Сброс CSS стилей -->
   <link href="{% static 'css/reset.css'%}" rel="stylesheet">
 
-  
-
-  <!-- Стили шапки сайта -->
   <link href="{% static 'css/_nav.css'%}" rel="stylesheet">
   <link href="{% static 'css/_footer.css'%}" rel="stylesheet">
   <link href="/static/css/_scrollUp.css" rel="stylesheet">
@@ -75,9 +64,6 @@
   {% include "_scrollUp.html" %}
   {% include "_footer.html" %}
 
-  
-  <!-- <script src="{% static "js/bootstrap.bundle.min.js" %}"></script>
-  <script src="{% static "js/custom.js" %}"></script> -->
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="{% static 'js/slick/slick.min.js'%}"></script>

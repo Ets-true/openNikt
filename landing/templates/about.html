@@ -5,9 +5,6 @@
 {% load static %}
 
 <div class="company">
-  <!-- <div class="about__notification">
-    Страница "О компании" на данный момент находится в разработке
-  </div> -->
 
   <div class="company__about about">
     <div class="about__content">
@@ -64,9 +61,7 @@
       </h2>
       <div class="history__diagram diagram">
         <div class="diagram__line">
-
         </div>
-
         <div class="diagram__elements">
           <div class="diagram__element">
             2015
@@ -78,7 +73,6 @@
             Наше<br>время
           </div>
         </div>
-
         <div class="diagram__info">
           <div class="text _element ex_1"> Cоздание компании <br> ООО "Никтел"</div>
           <div class="text _line ex_1"> Расширение партнерских связей </div>
@@ -86,45 +80,9 @@
           <div class="text _line ex_1"> Работа с клиентами <br> по всему миру</div>
           <div class="text _element ex_1 "> Продолжение <br>деятельности </div>
         </div>
-
-      </div>
-      
-    </div>
-
-  </div>
-</div>
-
-
-<div class="attantion_mobile">
-  Мобильная версия сайта находится в разработке
-</div>
-
-
-<!-- <main role="main">
-  
-  <div class="container mt-5">
-    
-    {% for about in abouts %}
-    <div class="row featurette">
-      <div class="col-md-7">
-        <h5>{{ about.header_text}}</h5>
-        <p>{% autoescape off%}{{ about.text }}</p>{% endautoescape %}
-        {#            <p>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>#}
-      </div>
-      <div class="col-md-5">
-        {% load thumbnail %}
-        {% thumbnail about.image "500x500" crop="center" as im %}
-        <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" src="{{ im.url }}"
-          height="{{ im.height }}" width="{{ im.width }}">
-        {% empty %}
-
-        {% endthumbnail %}
       </div>
     </div>
-    <hr class="featurette-divider">
-    {% endfor %}
-    
   </div>
-</main> -->
+</div>
 
 {% endblock %}
